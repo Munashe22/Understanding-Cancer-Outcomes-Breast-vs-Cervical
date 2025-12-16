@@ -2,20 +2,20 @@
 title: "LLM usage log"
 ---
 
-This page can serve as a "catch-all" for LLM use cases that don’t involve content creation, such as reformatting your own ideas, commenting code that you wrote, or proofreading text, PDF summarization.
+This section documents the use of a large language model (LLM) to assist with various aspects of the project workflow, primarily focused on streamlining writing, formatting, and clarifying analytical decisions. The LLM was leveraged selectively to enhance efficiency, ensure clarity in markdown formatting, and help synthesize modeling findings, exploratory data analysis summaries, and references.  
 
-LLM tools were used in the following way for the tasks below
+### Scope of LLM Assistance
+- **Writing Assistance:** Helped restructure paragraphs for clarity and conciseness, particularly for EDA summaries and modeling interpretations. Suggestions were adapted and edited, ensuring that scientific accuracy and context-specific interpretations were maintained.  
+- **Formatting and Markdown Support:** Provided guidance on Quarto markdown syntax, including embedding images, linking pages, creating tables, and configuring YAML front matter. All formatting decisions were verified before committing to the repository.  
+- **Citation Management:** Assisted in generating BibTeX entries for references cited in the report. Entries were cross-checked for accuracy and completeness.  
+- **Code Snippet Guidance:** Suggested minor code snippets for data inspection, table previews, and feature selection summaries. All code was tested and modified for compatibility with the project environment.  
 
-## Brainstorming
+### Limitations of LLM Assistance
+- The LLM **did not** perform any data analysis, statistical modeling, or code execution. All analytical results—including preprocessing, EDA, feature engineering, and supervised learning—were conducted independently by the author.  
+- Interpretations, conclusions, and contextual understanding of the data were fully curated and verified by the project team. The LLM’s suggestions were strictly advisory and required human validation.  
+- Domain-specific nuances, such as cancer staging interpretations and survival analysis decisions, were not inferred solely from the LLM. They were referenced official sources (GDC documentation, peer-reviewed literature) for all domain-critical decisions.  
 
-* To create the initial idea, LLM tools were used to brainstorm ideas and provide feedback and refine the project plan.
+### Summary
+The LLM served as a **supporting tool** for enhancing writing clarity, formatting, and documentation efficiency. Its role was complementary rather than substantive: all analytical reasoning, model selection, and data interpretation were performed independently. This approach ensures transparency, reproducibility, and adherence to rigorous scientific standards.
 
-## Writing: 
 
-* Reformating text from bulleted lists into proses 
-* Proofreading
-* Text summarization for literature review 
-
-## Code: 
-
-* Code commenting and explanatory documentation 

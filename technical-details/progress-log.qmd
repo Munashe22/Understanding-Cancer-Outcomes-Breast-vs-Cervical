@@ -2,35 +2,70 @@
 title: "Progress log"
 ---
 
-Use this page to track your progress and keep a log of your contributions to the project, please update this each time you work on your project, it is generally a good habit to adopt.
-
-If you are working as a team, at the end, you can duplicate the project and add it to your individual portfolio websites. If you do, you **MUST** retain attribution to your teammates. Removing attribution would constitute plagiarism.
-
 ## To-do
 
-* [ ] Explore possible topics by brainstorming with GPT 
-* [ ] write a technical methods sections for K-means
-* [ ] write a technical methods sections for PCA
+* [ ] Write up introduction and motivation
+* [ ] Write up Data Science Questions
+* [ ] Conduct Literature Review
+* [ ] Data Collection
+* [ ] Data Cleaning
+* [ ] Exploratory Data Analysis
+* [ ] Dimensionality Reduction
+* [ ] Clustering Analysis
+* [ ] Supervised Learning
+* [ ] Technical Report
+* [ ] Non-Technical Report
 
-... etc 
+## Munashe Mhlanga:
 
-## Member-1:
+[About Me](../index.qmd#about-us)
 
-Provide their name, a link to their "About Me" page.
+Project roles:
 
-Also, describe a log of their project roles.
+* [x] Data Collection
+* [x] Data Cleaning
+* [x] Exploratory Data Analysis
+* [x] Supervised Learning
+* [x] Technical Report
 
 **Weekly project contribution log:**
 
 
-**T: 10-15-2024** 
+**10-27-2025** 
 
-* [x] Coordinate with team member to set up weekly meeting time 
+* [x] Brainstormed topics and landed on predicting floods and droughts in sub-saharan Africa
 
 
-**M: 10-14-2024** 
+**11-03-2025** 
 
-* [x] Do a first draft of the project landing page 
+* [x] Data Collection through NOAA (National Oceanic and Atmospheric Administration) climate data
+
+**11-10-2025** 
+
+* [x] Literature Review and drop of initial project due to have reliance on time series methods. Project focus only required traditional machine learning methods that do not work on time series
+
+**11-17-2025** 
+
+* [x] Project brainstorm with partner, landing on predicting survival time for breast cancer and cervical cancer while comparing impact of factors on mortality e.g., age at diagnosis
+* [x] Data Collection
+
+**11-24-2025** 
+
+* [x] Project management and detailed workplan
+* [x] Data Cleaning
+
+**12-01-2025** 
+
+* [x] Exploratory Data Analysis
+
+**12-08-2025** 
+
+* [x] Supervised Learning
+
+**12-12-2025** 
+
+* [x] Technical Report
+* [x] Website edits
 
 
 ## Member-2
