@@ -72,3 +72,132 @@ These are just examples, you can use any structure that is suitable for your pro
 - **Simplicity**: Avoid jargon; focus on business-relevant insights.
 - **Visual Focus**: Prioritize charts and graphs over dense text.
 - **Emphasize Impact**: Always link data insights to business outcomes.
+
+# Technical Report
+
+## Model Results
+
+We evaluated three distinct machine learning approaches for predicting cancer patient survival times across both breast cancer (BRCA) and cervical cancer (CESC) datasets:
+
+### Breast Cancer (BRCA) Results
+
+```
+======================================================================
+                    FINAL MODEL COMPARISON
+======================================================================
+
+                     Model          MAE         RMSE            R²
+Standard Linear Regression 7.691527e+12 6.158508e+13 -2.406669e+21
+  Parametric Curve Fitting 1.288540e+03 1.798930e+03 -1.053500e+00
+   Random Forest Regressor 7.924000e+02 1.156060e+03  1.519000e-01
+
+======================================================================
+BEST MODEL: Random Forest Regressor
+   Achieved lowest MAE of 792.4 days
+======================================================================
+```
+
+**Best Hyperparameters for Random Forest (BRCA):**
+
+- n_estimators: 300
+- max_depth: None
+- min_samples_split: 5
+- min_samples_leaf: 1
+- max_features: 0.3
+- bootstrap: True
+- Best Cross-Validation MAE: 755.05
+- Out-of-Bag Score (R²): 0.1786
+
+### Cervical Cancer (CESC) Results
+
+```
+======================================================================
+                    FINAL MODEL COMPARISON
+======================================================================
+
+                     Model    MAE    RMSE      R²
+Standard Linear Regression 960.32 1268.35 -0.8628
+  Parametric Curve Fitting 887.97 1285.33 -0.9130
+   Random Forest Regressor 730.73  921.17  0.0174
+
+======================================================================
+BEST MODEL: Random Forest Regressor
+   Achieved lowest MAE of 730.73 days
+======================================================================
+```
+
+**Best Hyperparameters for Random Forest (CESC):**
+
+- n_estimators: 500
+- max_depth: 10
+- min_samples_split: 2
+- min_samples_leaf: 2
+- max_features: log2
+- bootstrap: True
+- Best Cross-Validation MAE: 709.13
+- Out-of-Bag Score (R²): 0.0970
+
+### Model Performance Analysis
+
+**Random Forest consistently emerged as the superior model** for both cancer types, achieving the lowest Mean Absolute Error (MAE) in both cases. This success can be attributed to several key factors:
+
+1. **Non-linear Relationship Capture**: Cancer survival involves complex, non-linear interactions between clinical variables that Random Forest effectively models through its ensemble of decision trees.
+
+2. **Robust Feature Handling**: The algorithm naturally handles mixed data types (categorical staging variables, continuous age/treatment counts) without extensive preprocessing requirements.
+
+3. **Overfitting Resistance**: The ensemble approach and bootstrap sampling provide built-in regularization, preventing overfitting to training data patterns.
+
+4. **Feature Importance**: Random Forest provides interpretable feature importance scores, crucial for clinical applications where understanding driving factors is essential.
+
+The **Standard Linear Regression showed severe overfitting** in the BRCA dataset (extremely high MAE and negative R²), while **Parametric Curve Fitting with Lasso regularization** performed moderately but still struggled with the complex, non-linear nature of cancer survival patterns.
+
+## Discussion
+
+::: {.columns}
+::: {.column width="50%"}
+![Feature Importance for BRCA Survival Time Prediction](../assets/BRCA-FeatureImportance.png){fig-alt="Feature Importance Results for BRCA Random Forest"}
+:::
+
+::: {.column width="50%"}
+![Feature Importance for CESC Survival Time Prediction](../assets/CESC-FeatureImportance.png){fig-alt="Feature Importance Results for CESC Random Forest"}
+:::
+:::
+
+Our Random Forest models revealed distinct but complementary patterns in feature importance across cancer types, with age at diagnosis consistently emerging as a top predictor for both BRCA and CESC cohorts, reflecting well-established clinical evidence linking advanced age to poorer outcomes due to comorbidity burden and aggressive tumor biology. In breast cancer, the model identified treatment counts and comprehensive tumor staging variables (T, N, M, overall stage) as critical predictors, with spatial descriptors and treatment modalities (radiation, pharmaceutical therapy) collectively explaining over 60% of predictive power, suggesting that survival is dominated by disease extent and treatment intensity. Cervical cancer analysis revealed FIGO staging as the overwhelmingly dominant predictor, consistent with its central role in clinical decision-making, while age, treatment counts, and demographic variables (including race) comprised secondary but important factors, with the top ten features accounting for over 68% of model importance—indicating more concentrated predictive factors than in breast cancer. Notably, despite tobacco exposure being a known cervical cancer risk factor, smoking-related variables did not appear among top predictors, likely due to dataset limitations including predominant non-smoker representation and potential underreporting, highlighting the critical role of data completeness in model performance and clinical interpretation.
+
+These results reinforce why cervical cancer screening is recommended to start earlier at age 21 compared to breast cancer (after 30 for high risk individuals) @uspstf_cervical_2018 @uspstf_breast_2024 . However, cervical cancer prevention efforts receive less public visibility than breast cancer campaigns and tying the campaigns together could help catch cervical cancer earlier in the population @benard_cervical_disparities . This could improve survival time as the tumor stage is the dominant predictor for cervical cancer in our findings and cervical cancer has a lower survival rate of 66% compared to that of breast cancer (90%) @siegel_cancer_stats_2023 .
+
+## Future Improvements
+
+Several technical enhancements could significantly improve our cancer survival prediction models:
+
+### Data Enhancement
+- **Multi-modal Integration**: Incorporate genomic data, imaging features, and proteomics to create a more comprehensive patient profile
+- **Temporal Modeling**: Include longitudinal treatment response data and biomarker changes over time
+- **External Validation**: Test models on independent datasets from different institutions to assess generalizability
+
+### Advanced Modeling Techniques
+- **Deep Learning Approaches**: Implement neural networks specifically designed for survival analysis (DeepSurv, DeepHit)
+- **Ensemble Methods**: Combine multiple algorithms using stacking or voting approaches for improved robustness
+- **Survival-Specific Models**: Utilize Cox Proportional Hazards models or accelerated failure time models designed for time-to-event data
+
+### Feature Engineering
+- **Interaction Terms**: Systematically explore clinically meaningful feature interactions (e.g., stage × treatment combinations)
+- **Derived Biomarkers**: Create composite scores from multiple clinical variables
+- **Time-Varying Covariates**: Model how patient characteristics change during treatment
+
+### Model Optimization
+- **Hyperparameter Optimization**: Implement Bayesian optimization or genetic algorithms for more efficient parameter tuning
+- **Cross-Validation Strategy**: Use stratified or time-series cross-validation appropriate for clinical data
+- **Uncertainty Quantification**: Implement confidence intervals and prediction uncertainty estimates for clinical decision support
+
+### Clinical Integration
+- **Interpretability Tools**: Develop SHAP (SHapley Additive exPlanations) or LIME explanations for individual patient predictions
+- **Risk Stratification**: Create clinically meaningful risk categories rather than continuous predictions
+- **Real-time Deployment**: Build APIs for integration into electronic health record systems
+
+### Evaluation Metrics
+- **Clinical Relevance**: Include clinically meaningful metrics like concordance index (C-index) for survival models
+- **Subgroup Analysis**: Evaluate model performance across demographic and clinical subgroups to assess fairness
+- **Calibration Assessment**: Ensure predicted survival probabilities match observed outcomes across risk levels
+

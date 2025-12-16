@@ -1,0 +1,125 @@
+# Overview 
+
+Our data cleaning methods were comparable for both the `cervical (cesc)` and `breast (brca)` cancer datasets due to the dataset having similar columns due to both diseases being cancer. The clinical breast cancer dataset originally has 5546 rows and 210 columns representing 1098 patients. The clinical cervical cancer dataset originally has 1535 rows and 210 columns representing 307 patients.
+
+Our data cleaning was focused on three key areas:
+
+- Managing missing data
+- Data type correction and formatting
+- Data engineering
+
+Visualizations below will be centered on the brca dataset due to the larger number of samples. However, the similar process for cleaning the `cesc` dataset can be found [here](https://github.com/dsan-5000/fall-2025-project-Munashe22/tree/main/technical-details/data-cleaning) along with the data cleaning code for the `brca` dataset.
+
+## Managing Missing Data:
+
+```{python}
+#| echo: false
+#| warning: false
+#| tbl-cap: Rows showing a unique patient (cases.submitter_id) and their different treatments for breast cancer
+
+# Import relevant libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+%matplotlib inline
+import plotly.express as px
+import plotly.graph_objects as go
+import plotly.io as pio
+pio.renderers.default = "notebook_connected"
+import missingno as msno
+import warnings
+warnings.filterwarnings('ignore')
+from scipy import stats
+from scipy.stats import norm, skew
+
+# Import dataset
+brca_df_original = pd.read_csv("../../data/raw-data/brca/brca-clinical.tsv", sep="\t")
+
+# Create a copy of the original dataframe to work on
+brca_df = brca_df_original.copy()
+
+# Display first few rows of the dataset
+brca_df.head()
+```
+
+`Missing data`: From viewing both datasets, the missing data was represented as '--- and required replacing the placeholder string with numpy nontype in order to handle missing values efficiently.
+
+The missing values per columns ranged from 0% to 100%, this was a limitation of the datasets especially due to a lot of demographic columns having a large percentage of missing values, as these columns might have been potential social determinants of survival days depending on the type of cancer,
+
+```{python}
+#| echo: false
+#| warning: false
+#| tbl-cap: Distribution of missing values in key demographic columns
+
+cols_to_check = [
+    'demographic.year_of_birth',
+    'demographic.age_at_index',
+    'demographic.cause_of_death',
+    'demographic.year_of_death',
+    'demographic.vital_status',
+    'demographic.cause_of_death',
+    'demographic.education_level',
+    'demographic.days_to_death'
+]
+for col in cols_to_check:
+    missing_percentage = brca_df[col].isnull().mean() * 100
+    print(f"{col}: {missing_percentage:.2f}% missing values")
+```
+
+However, the `demographic.vital_status` column has fewer missing values, which still allowed for some analysis regarding survival status. Despite a large number of missing values in `demographic.days_to_death`, we reasonable assummed it is because the patient is alive since the missing values corresponded to **alive** in the `vital_status` column. In addition, `days_to_last_follow_up` also has fewer missing values (11% in the brca dataset, and 12% in the cesc dataset), which enabled inferring survival time in feature engineering.
+
+The datasets had a lot of columns with missing data. The overall original view of missing data in the brca dataset is showed below:
+
+```{python}
+#| echo: false
+#| warning: false
+#| tbl-cap: Distribution of missing values in breast cancer dataset
+
+# Replace "'--" as NA
+brca_df_original.replace('\'--', np.nan, inplace=True)
+brca_df.replace('\'--', np.nan, inplace=True)
+
+plt.figure(figsize=(15, 8))
+msno.matrix(brca_df)
+plt.title("Missing Data Matrix - Breast Cancer Dataset", fontsize=14, fontweight='bold')
+plt.show()
+```
+
+Most of the missing values were initially dropped through the following logic:
+
+- Drop of columns with more than 30% data missing (except `days_to_death` as it is a key column for analysis). This reduced the number of columns by ~75% (e.g., to 46 columns for brca)
+- Drop of columns irrelevant to the task of analysing survival time for the two different types of cancers e.g., data consent - not a predictor of how someone will survive a cancer, year of diagnoses - age at diagnoses captures the effect 
+- Drop of duplicate rows and rows with greater than 30% of the data missing i.e., 30% of information on that patient missing
+
+The above resulted in a cleaner dataset as shown below:
+
+![Distribution of missing data after dropping missing values as described above](../../assets/mssno-clean.png)
+
+Afterwards, missing data was cleaned as follows
+
+1. For most of the columns, the missing values were replaced with the mode/most frequent value e.g., diasease_is_primary diasease as True, site_of_involvement as breast, pathologic n (lymph node component of cancer staging) as N0 (no regional lymph node metastasis) due to heavy imbalance towards specific classes
+2. Overall stage infered from pathologic n, pathologic t (size and extent of primary tumor), and pathologic m (distant metastasis - whether the cancer has spread to distant organs)
+3. Handling of missing data in `days_to_death` was handled in the supervised learning section, this was due to the patients still being alive 
+
+## Data Type Correction and Formatting:
+
+- **Data Types**: All columns in the dataset are originally stored as object datatype
+- **Transformation**: Columns were changed to numeric, boolean, and strings as needed in the dataset
+  - *Numeric*: `days_to_death` and `days_to_last_follow_up` were changed to numeric integers. `age_at_diagnoses` was changed from days to years for easier analysis during exploratory data analysis
+  - *Boolean*: Boolean columns were primarily coded as yes/no and these values were changed to True/False respectively
+  - *Strings*: Object columns were changed to lowercase strings and leading/trailing whitespace trimmed
+- **Impact of changes**: These changes were primarily made with exploratory data analysis in mind and a longer term view towards survival time prediction. Changing age at diagnoses to years enabled better synthesis of multivariate analysis and while preserving `days_to_death` and `days_to_last_follow_up ` preserved information as the columns are a measure of survival time. Boolean columns enabled efficient filtering and subseeting and the string columns were optimal for wordcloud analysis.
+
+## Data Engineering: 
+
+After validating the range and distribution of `age_at_diagnosis` (min of 26 years and max of 89 years), and handling negative values for `days_to_last_follow_up` by replacing them with the mean, our data engineering process involved extracting more data from columns. Primarily the two columns below were derived:
+
+- `diagnosis.behavior`: Tumor behavior was derived from the `diagnoses.morphology` field using the International Classification of Diseases for Oncology, Third Edition (ICD-O-3). Morphology codes follow the format `####/B`, where the digit following the slash encodes tumor behavior (e.g., `/3` indicates malignant primary disease). For example, morphology code `8500/3` corresponds to infiltrating duct carcinoma
+with malignant primary behavior. Behavior values were extracted and mapped to ordinal numeric representations following ICD-O-3 guidelines. @who_icdo3
+- `survival_time_days`: Survival time was derived using clinical time-to-event variables provided by the Genomic Data Commons (GDC). @gdc_clinical_data_model For patients with a recorded death event, survival time was calculated as the difference between `demographic.days_to_death` and `diagnoses.days_to_diagnosis`, yielding the number of days survived following cancer diagnosis. For patients without a recorded death event (i.e., alive at last contact), survival time was defined as `diagnoses.days_to_last_follow_up`, representing the number of days from diagnosis to the most recent clinical follow-up. This approach follows standard survival analysis practice by treating deaths as observed events and living patients as right-censored observations. Missing values in `days_to_death` were therefore interpreted as censored outcomes rather than zero survival time. No additional adjustments or imputation were applied to survival duration to preserve the temporal integrity of the observed clinical timelines.
+
+Further data engineering e.g., handling of multiple rows per patient due to multiple treatment types, were handled in feature engineering before machine learning in order to analyse variables in depth e.g., number of treatments. Additional columns are also dropped and some created after exploratory data analysis (EDA) continuing the process of data engineering.
+
+For cervical cancer, data cleaning also included extracting the tobacco smoking status and unique ID from the exposure dataset. Unfortunately, the breast cancer exposure file contained only missing values, limiting our analysis. However, examining tobacco exposure in the cervical cancer dataset and not in the breast cancer dataset is epidemiologically justified as cigarette smoking is a recognized co-factor in cervical carcinogenesis while it is not considered a primary risk factor for breast cancer onset or progression, with prior research indicating weak, inconsistent, or indirect associations compared to dominant hormonal, genetic, and reproductive factors @scala2023smoking_breast_cancer
+

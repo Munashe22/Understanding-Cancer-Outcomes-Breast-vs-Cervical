@@ -1,12 +1,47 @@
 # Overview
 
-In this section, provide a high-level overview for technical staff, summarizing the key tasks and processes carried out here. Include the following elements:
+## Data Source
 
-- **Goals**: Clearly define the purpose of the tasks or analysis being conducted.
-- **Motivation**: Explain the reasoning behind the work, such as solving a specific problem, improving a system, or optimizing performance.
-- **Objectives**: Outline the specific outcomes you aim to achieve, whether it's implementing a solution, analyzing data, or building a model.
+The data used in this project were obtained from the **National Cancer Institute (NCI) Genomic Data Commons (GDC)** @nci_gdc_docs, a centralized repository designed to support cancer research by providing harmonized clinical, genomic, and exposure-related data across multiple cancer types. The GDC integrates data from large-scale initiatives such as **The Cancer Genome Atlas (TCGA)** @tcga_program and applies standardized data models, vocabularies, and quality control procedures to ensure consistency and reproducibility across studies.
 
-This overview should give technical staff a clear understanding of the context and importance of the work, while guiding them on what to focus on in the details that follow.
+![National Cancer Institute (NCI) Genomic Data Commons (GDC)](../../assets/data-source.png){alt = "National Cancer Institute Genomic Data Commons home page"}
 
+## Data Collection Methods
 
+For this analysis, we focused on two TCGA cohorts: **Breast Invasive Carcinoma (TCGA-BRCA) and Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma (TCGA-CESC)**. These datasets were selected to enable comparative analysis of two common cancers affecting women, while allowing investigation into differences in tumor characteristics, treatment patterns, and survival outcomes.
 
+Clinical data were downloaded from the GDC Data Portal in tabular format (`clinical.tsv` and related files), which aggregate information across several hierarchical entities, including **cases, demographic, diagnoses, treatments,** and **exposures.** Variables include patient-level demographics (e.g., age at diagnosis, race, vital status), tumor-specific characteristics (e.g., stage, grade, morphology), treatment indicators (e.g., treatment type), and outcome-related fields (e.g., days to last follow-up). All time-to-event variables in the GDC are reported in **days**, indexed relative to clinically meaningful anchor points such as diagnosis or enrollment dates.
+
+![TCGA-CESC (Cervical Cancer Example Download)](../../assets/tcga-source.png){alt = "National Cancer Institute Genomic Data Commons data download page"}
+
+## Data Structure and Format
+
+Importantly, the GDC data are **de-identified** to protect patient privacy, and certain variables may be obfuscated or missing by design. For example, ages above a threshold may be masked, dates may be offset, and exposure variables such as smoking status may be underreported. Additionally, patients may have **multiple rows per case**, reflecting repeated diagnoses, treatments, or follow-up events, necessitating aggregation and careful preprocessing prior to modeling.
+
+```{python}
+#| echo: false
+#| warning: false
+#| tbl-cap: Rows showing a unique patient (cases.submitter_id) and their different treatments for breast cancer
+import pandas as pd
+
+# Import dataset
+brca_df = pd.read_csv("../../data/raw-data/brca/brca-clinical.tsv", sep="\t")
+
+# Show rows for patient TCGA-E2-A1IU with selected columns
+patient_data = brca_df[brca_df["cases.submitter_id"] == "TCGA-E2-A1IU"]
+columns_to_show = ["cases.submitter_id", "treatments.treatment_type", 
+                   "treatments.treatment_intent_type", "demographic.vital_status",
+                   "diagnoses.ajcc_pathologic_stage"]
+patient_data[columns_to_show]
+
+```
+
+## Data
+
+While TCGA cohorts are not fully representative of the general U.S. population, they remain one of the most comprehensive publicly available cancer datasets, widely used in both biomedical and data science research. The use of GDC data enables reproducible analysis while providing sufficient clinical depth to explore survival patterns and predictive modeling across cancer types.
+
+Our raw data can be found in our repository [here](https://github.com/dsan-5000/fall-2025-project-Munashe22/tree/main/data), including a data dictionary.
+
+As of 11/05/2025, 
+- the clinical breast cancer dataset originally has 5546 rows and 210 columns representing 1098 patients
+- the clinical cervical cancer dataset originally has 1535 rows and 210 columns representing 307 patients
