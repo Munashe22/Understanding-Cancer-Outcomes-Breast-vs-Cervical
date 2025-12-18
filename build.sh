@@ -39,20 +39,16 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
     git push
 
 else
-    echo NOT PUSHING TO GTIHUB!
+    echo NOT PUSHING TO GITHUB!
 fi
 
+# Prompt the user to deploy to GU domains
+echo "Do you want to push the website to your Georgetown University (GU) domains folder? (y/n)"
+read -r answer
 
-
-
-
-
-
-# PUSH WEBSITE TO GU DOMAINS 
-# printf 'Would you like to push to GU domains? (y/n)? '
-# read answer
-# if [ "$answer" != "${answer#[Yy]}" ] ;then 
-#     rsync -alvr --delete _site/* jfhgeorg@gtown.reclaimhosting.com:/home/jfhgeorg/public_html/dsan-5000/
-# else
-#     echo NOT PUSHING TO GU DOMAINS!
-# fi
+if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
+    rsync -avz --delete ./ munasheg@gtown03.reclaimhosting.com:/home/munasheg/DSAN-5000-Project
+    echo "Website pushed to GU domains."
+else
+    echo "Deployment to GU domains folder skipped."
+fi

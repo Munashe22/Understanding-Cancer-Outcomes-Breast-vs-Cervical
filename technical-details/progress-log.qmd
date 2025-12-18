@@ -4,17 +4,17 @@ title: "Progress log"
 
 ## To-do
 
-* [ ] Write up introduction and motivation
-* [ ] Write up Data Science Questions
-* [ ] Conduct Literature Review
-* [ ] Data Collection
-* [ ] Data Cleaning
-* [ ] Exploratory Data Analysis
-* [ ] Dimensionality Reduction
-* [ ] Clustering Analysis
-* [ ] Supervised Learning
-* [ ] Technical Report
-* [ ] Non-Technical Report
+* [x] Write up introduction and motivation
+* [x] Write up Data Science Questions
+* [x] Conduct Literature Review
+* [x] Data Collection
+* [x] Data Cleaning
+* [x] Exploratory Data Analysis
+* [x] Dimensionality Reduction
+* [x] Clustering Analysis
+* [x] Supervised Learning
+* [x] Technical Report
+* [x] Non-Technical Report
 
 ## Munashe Mhlanga:
 

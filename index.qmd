@@ -26,25 +26,22 @@ Given these complex differences, machine learning offers powerful analytical too
 
 ## About Us
 
-::: columns
-::: column width="50%"
-![Munashe Mhlanga](assets/munashe-mhlanga.png){width=70% alt = "Munashe Mhlanga portrait"}
+![Munashe Mhlanga](assets/munashe-mhlanga.png){width=50% alt="Munashe Mhlanga portrait"}
 
 **Munashe Mhlanga**  
 MS Data Science & Analytics, Georgetown University  
 
-Munashe focuses on applied data science for social impact, with research interests in digital transformation, accessibility, and ethical data use.
 [LinkedIn](https://www.linkedin.com/in/munashe-mhlanga/)
-:::
-::: column width="50%"
-![Betsy](assets/betsiet-delelegn.png){width=70% alt = "Betsy portrait"}
+
+---
+
+![Betsiet Delelegn](assets/betsiet-delelegn.png){width=50% alt="Betsiet Delelegn portrait"}
 
 **Betsiet Delelegn**  
-MS Data Science & Analytics, Georgetown University
+MS Data Science & Analytics, Georgetown University  
 
 [LinkedIn](https://www.linkedin.com/in/betsiedelelegn/)
-:::
-:::
+
 
 ## Additional Resources
 
