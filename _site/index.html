@@ -152,14 +152,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started">Getting Started</a></li>
-  <li><a href="#what-to-include-on-this-page" id="toc-what-to-include-on-this-page" class="nav-link" data-scroll-target="#what-to-include-on-this-page">What to Include on This Page</a>
+  <li><a href="#about-the-project" id="toc-about-the-project" class="nav-link active" data-scroll-target="#about-the-project">About the Project</a></li>
+  <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review">Literature Review</a></li>
+  <li><a href="#about-us" id="toc-about-us" class="nav-link" data-scroll-target="#about-us">About Us</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a>
   <ul class="collapse">
-  <li><a href="#create-an-about-you-page" id="toc-create-an-about-you-page" class="nav-link" data-scroll-target="#create-an-about-you-page">Create an “About You” Page</a></li>
-  <li><a href="#create-a-landing-page-for-your-project" id="toc-create-a-landing-page-for-your-project" class="nav-link" data-scroll-target="#create-a-landing-page-for-your-project">Create a Landing Page for Your Project</a></li>
-  <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review">Literature review</a></li>
+  <li><a href="#podcast-womens-health" id="toc-podcast-womens-health" class="nav-link" data-scroll-target="#podcast-womens-health">Podcast: Women’s Health</a></li>
+  <li><a href="#youtube-channel-cleveland-clinic" id="toc-youtube-channel-cleveland-clinic" class="nav-link" data-scroll-target="#youtube-channel-cleveland-clinic">YouTube Channel: Cleveland Clinic</a></li>
+  <li><a href="#blog-reading-resource" id="toc-blog-reading-resource" class="nav-link" data-scroll-target="#blog-reading-resource">Blog / Reading Resource</a></li>
+  <li><a href="#learn-more-about-care" id="toc-learn-more-about-care" class="nav-link" data-scroll-target="#learn-more-about-care">Learn More About Care</a></li>
+  <li><a href="#donation" id="toc-donation" class="nav-link" data-scroll-target="#donation">Donation</a></li>
   </ul></li>
-  <li><a href="#additional-ideas-for-things-to-include" id="toc-additional-ideas-for-things-to-include" class="nav-link" data-scroll-target="#additional-ideas-for-things-to-include">Additional Ideas for things to include</a></li>
   </ul>
 </nav>
     </div>
@@ -185,92 +188,61 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Audio instructions:</strong></p>
-<p>If you want, you can listen to the instructions:</p>
-<audio controls="">
-<source src="audio/landing-page-instructions.mp3" type="audio/mpeg">
-</audio>
-<p><sup> <strong>Source</strong>: Text-to-speech conversion done with Amazon Polly on AWS </sup></p>
-<p><code>Note</code>: These audio instructions should not be included in your final submission or repository, once you are done wiht them, please delete the files and remove them from the website.</p>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
-<p>To begin the project, first read the instruction document (<a href="./instructions/overview.html">click here</a>). This document is also accessible from the navigation bar.</p>
-<p>Once you’ve completed that, you can proceed with the instructions found throughout the website.</p>
+<section id="about-the-project" class="level2">
+<h2 class="anchored" data-anchor-id="about-the-project">About the Project</h2>
+<p>Our project investigates survival patterns in breast cancer and cervical cancer using data from The Cancer Genome Atlas. Cancer patients with the same diagnosis expirence different outcomes based on several factors whether it is treatment recieved, age, cancer stage and other clinical factors. Understanding these patterns will assist in improving patient care and personalizing medicines. Our analysis combines unsupervised learning and supervised learning to identify patient subgroups, predict survival time, and identify top important prognotic factors.</p>
+<p><strong>Key Questions:</strong> - What distinct patient subgroups exist within breast and cervical cancer? - How do mortality patterns differ between these cancers, and why? - Which clinical features most strongly predict survival outcomes? - What are the key prognostic factors for each cancer type?</p>
 </section>
-<section id="what-to-include-on-this-page" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-include-on-this-page">What to Include on This Page</h2>
-<p>This is the landing page for your project. Content from this page can be reused in sections of your final report.</p>
-<section id="create-an-about-you-page" class="level3">
-<h3 class="anchored" data-anchor-id="create-an-about-you-page">Create an “About You” Page</h3>
-<ul>
-<li>Develop your “About You” page. You can reuse content from previous assignments.</li>
-<li>You can include the content here or on a separate page.
-<ul>
-<li>It’s recommended to create one “About You” page for all DSAN projects, with links to your various class projects.</li>
-</ul></li>
-</ul>
+<section id="literature-review" class="level2">
+<h2 class="anchored" data-anchor-id="literature-review">Literature Review</h2>
+<p>To better understand survival patterns in breast cancer (BRCA) and cervical cancer (CESC), multiple intersecting factors should be investigated. The Cancer Genome Atlas (TCGA) has revealed that even with the same diagnosis, different cancer subtypes exist. Known clinical features that predict survival include stage at diagnosis, age, and treatment type, but these may not be equally important for cervical versus breast cancer.</p>
+<p>Research on cervical cancer discovered patterns that predict treatment response while, breast cancer research has categorized patients based on hormone receptors and genetic characteristics. These cancers also differ in their key predictive factors: cervical cancer outcomes are heavily influenced by HPV status, cell type, and early detection via pap smears, while breast cancer outcomes are influenced by hormone receptor status and HER2 amplification. Treatment approaches also differ substantially, with breast cancer benefiting more from targeted therapies and cervical cancer relying more on radiation and surgery.</p>
+<p>Given these complex differences, machine learning offers powerful analytical tools. Unsupervised learning methods have shown to identify patient subgroups by revealing cluster structures in clinical and demographic data. Random Forest models excel at predicting survival and comparing feature importance across cancers. Our study combines both unsupervised and supervised approaches, providing a comprehensive framework for understanding what determines survival in cancer patients.</p>
 </section>
-<section id="create-a-landing-page-for-your-project" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-landing-page-for-your-project">Create a Landing Page for Your Project</h3>
-<ul>
-<li>Summarize your topic, its significance, related work, and the questions you plan to explore.</li>
-<li>Draft an introduction with at least <strong>5 research questions</strong>. These may evolve as your project progresses, since data science is an iterative process.</li>
-<li>Include your data science questions on this page.</li>
-</ul>
+<section id="about-us" class="level2">
+<h2 class="anchored" data-anchor-id="about-us">About Us</h2>
+<div class="columns">
+<p>::: column width=“50%” <img src="assets/munashe-mhlanga.png" class="img-fluid" alt="Munashe Mhlanga">{width=70% alt = “Munashe Mhlanga portrait”}</p><p><strong>Munashe Mhlanga</strong><br>
+MS Data Science &amp; Analytics, Georgetown University</p><p>Munashe focuses on applied data science for social impact, with research interests in digital transformation, accessibility, and ethical data use. <a href="https://www.linkedin.com/in/munashe-mhlanga/">LinkedIn</a></p>
+</div>
+<p>::: column width=“50%” <img src="assets/betsiet-delelegn.png" class="img-fluid" alt="Betsy">{width=70% alt = “Betsy portrait”}</p>
+<p><strong>Betsiet Delelegn</strong><br>
+MS Data Science &amp; Analytics, Georgetown University</p>
+<p><a href="https://www.linkedin.com/in/betsiedelelegn/">LinkedIn</a> ::: :::</p>
 </section>
-<section id="literature-review" class="level3">
-<h3 class="anchored" data-anchor-id="literature-review">Literature review</h3>
-<p>Once you decide on a topic, you should <code>ALWAYS START WITH A LITERATURE REVIEW</code>, this is particularly important for academic projects.</p>
-<p>The literature review is the most important part of most projects.</p>
-<p>It allows you to;</p>
-<ul>
-<li><ol type="1">
-<li>Determine what is already known and what has already been tried, so that you <code>don't re-invent the wheel</code>.</li>
-</ol></li>
-<li><ol start="2" type="1">
-<li>It makes you more of a subject matter expert, allowing you to <code>ask the right questions</code>, <code>target impactful projects</code>, and <code>communicate with other professionals</code>.</li>
-</ol></li>
-</ul>
-<blockquote class="blockquote">
-<p>Doing a project that you think will change the world, only to find at the end that a very similar version of your project was already done in the 1980’s, isn’t a great use of time.</p>
-</blockquote>
-<p>In this section, please do a literature review and cite at least <strong>3 academic publications</strong> per group member, and include <strong>internal academic citations</strong>.</p>
-<p><strong>Optional</strong>: Consider using LLM tools to 10X your literature review, e.g.&nbsp;instead of focusing on 3 papers, aim for 30 or more</p>
-<p>By following these steps, you can 10X the efficiency of your literature review process, gaining more insights while minimizing the time spent on manual reading.</p>
-<ol type="1">
-<li><p><strong>Expand Your Literature Search</strong><br>
-Aim to gather a larger pool of papers. Use academic databases (Google Scholar, arXiv, etc.) to find relevant studies and ensure a broad scope.</p></li>
-<li><p><strong>Skim the Abstracts</strong><br>
-Read the abstracts of each paper to quickly understand their focus and identify those most relevant to your topic. Prioritize these papers for deeper analysis.</p></li>
-<li><p><strong>Use LLM Tools for Summarization</strong><br>
-Upload the selected papers to an LLM tool capable of text summarization. Have it condense the main points of each paper into a concise, manageable summary (e.g., condense hundreds of pages into a 10-page summary). Carefully review this summary to absorb the key insights.</p></li>
-<li><p><strong>Leverage Interactive LLM Tools</strong><br>
-Use tools like NotebookLM or other AI-based text digesters to ask specific, targeted questions about the papers:</p>
-<ul>
-<li>Example questions:
-<ul>
-<li>“In the papers uploaded, did any of them explore XYZ?”</li>
-<li>“Which paper is most closely related to the following project idea: [explain idea]?” These tools will help you quickly extract relevant information without re-reading entire papers.</li>
-</ul></li>
-</ul></li>
-</ol>
+<section id="additional-resources" class="level2">
+<h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
+<p>Please find additional resources on womens health below:</p>
+<section id="podcast-womens-health" class="level3">
+<h3 class="anchored" data-anchor-id="podcast-womens-health">Podcast: Women’s Health</h3>
+<p><strong>Women’s Health Podcast</strong><br>
+A wide-ranging podcast covering women’s health topics including hormonal health, aging, disease prevention, and overall wellbeing.</p>
+<p><a href="https://open.spotify.com/show/43nD6llaSIYZObFbatqaJu?trackId=4GxZKOak4mz6VmMJUmO4Is">Women’s Health Podcast</a></p>
 </section>
+<section id="youtube-channel-cleveland-clinic" class="level3">
+<h3 class="anchored" data-anchor-id="youtube-channel-cleveland-clinic">YouTube Channel: Cleveland Clinic</h3>
+<p><strong>Speaking of Women’s Health (Cleveland Clinic)</strong><br>
+Expert-led video discussions focused on women’s wellness, preventive care, and clinical health topics.</p>
+<p><a href="https://www.youtube.com/@SPKwomenshealth">Speaking of Women’s Health – YouTube</a></p>
 </section>
-<section id="additional-ideas-for-things-to-include" class="level2">
-<h2 class="anchored" data-anchor-id="additional-ideas-for-things-to-include">Additional Ideas for things to include</h2>
-<ul>
-<li><strong>Audience</strong>: Who is this for? Data professionals, businesses, researchers, or curious readers.</li>
-<li><strong>Headline</strong>: A captivating title introducing the data science theme (e.g., “Unlocking Insights Through Data Stories”).</li>
-<li><strong>Introduction</strong>: A brief, engaging overview of what the website offers (e.g., data-driven stories, insights, or case studies).</li>
-<li><strong>Questions You Are Addressing</strong>: What do you hope to learn?</li>
-<li><strong>Motivation</strong>: Explain why this topic matters, highlighting the importance of data in solving real-world problems.</li>
-<li><strong>Key Topics</strong>: List the main focus areas (e.g., machine learning, data visualization, predictive modeling).</li>
-<li><strong>Use Cases/Examples</strong>: A brief teaser of compelling stories or case studies you’ve worked on.</li>
-<li><strong>Call to Action</strong>: Invite visitors to explore the content, follow along, or contact you for more information.</li>
-<li><strong>Visual/Infographic</strong>: Add a simple graphic or visual element to make the page more dynamic.</li>
-</ul>
+<section id="blog-reading-resource" class="level3">
+<h3 class="anchored" data-anchor-id="blog-reading-resource">Blog / Reading Resource</h3>
+<p><strong>Speaking of Women’s Health – Cleveland Clinic</strong><br>
+An evidence-based blog and educational resource with articles on gynecology, cancer screening, menopause, and general women’s health.</p>
+<p><a href="https://speakingofwomenshealth.com/">Speaking of Women’s Health – Articles</a></p>
+</section>
+<section id="learn-more-about-care" class="level3">
+<h3 class="anchored" data-anchor-id="learn-more-about-care">Learn More About Care</h3>
+<p><strong>Georgetown Lombardi Comprehensive Cancer Center – Breast Cancer Care</strong><br>
+Clinical information, diagnostic pathways, and patient-centered breast cancer care resources.</p>
+<p><a href="https://lombardi.georgetown.edu/patient/diseases/breast_cancer/">Get Diagnosed or Learn More About Breast Cancer Care</a></p>
+</section>
+<section id="donation" class="level3">
+<h3 class="anchored" data-anchor-id="donation">Donation</h3>
+<p>Please consider donating to <strong><a href="https://cancerserve.org/donate/">CancerServe</a></strong>, a voluntary organization that focuses on education, community mobilisation, and assistance for disadvantaged patients in Zimbabwe.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

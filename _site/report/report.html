@@ -172,15 +172,15 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#final-report" id="toc-final-report" class="nav-link active" data-scroll-target="#final-report">Final Report</a>
+  <li><a href="#understanding-breast-and-cervical-cancer-patient-outcomes-and-survival-patterns" id="toc-understanding-breast-and-cervical-cancer-patient-outcomes-and-survival-patterns" class="nav-link active" data-scroll-target="#understanding-breast-and-cervical-cancer-patient-outcomes-and-survival-patterns">Understanding Breast and Cervical Cancer: Patient Outcomes and Survival Patterns</a>
   <ul class="collapse">
-  <li><a href="#guidelines-for-creating-a-good-narrative" id="toc-guidelines-for-creating-a-good-narrative" class="nav-link" data-scroll-target="#guidelines-for-creating-a-good-narrative">Guidelines for Creating a Good Narrative</a></li>
-  <li><a href="#report-content" id="toc-report-content" class="nav-link" data-scroll-target="#report-content">Report Content</a>
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link" data-scroll-target="#executive-summary">Executive Summary</a>
   <ul class="collapse">
-  <li><a href="#case-1-academic-oriented-projects" id="toc-case-1-academic-oriented-projects" class="nav-link" data-scroll-target="#case-1-academic-oriented-projects">Case-1: Academic-Oriented Projects</a></li>
-  <li><a href="#case-2-business-oriented-projects" id="toc-case-2-business-oriented-projects" class="nav-link" data-scroll-target="#case-2-business-oriented-projects">Case-2: Business-Oriented Projects</a></li>
+  <li><a href="#about-the-study" id="toc-about-the-study" class="nav-link" data-scroll-target="#about-the-study">About the Study</a></li>
+  <li><a href="#who-are-our-patients" id="toc-who-are-our-patients" class="nav-link" data-scroll-target="#who-are-our-patients">Who Are our Patients?</a></li>
+  <li><a href="#what-we-discovered" id="toc-what-we-discovered" class="nav-link" data-scroll-target="#what-we-discovered">What We Discovered</a></li>
+  <li><a href="#can-we-predict-survival" id="toc-can-we-predict-survival" class="nav-link" data-scroll-target="#can-we-predict-survival">Can we predict survival?</a></li>
   </ul></li>
-  <li><a href="#final-tips" id="toc-final-tips" class="nav-link" data-scroll-target="#final-tips">Final Tips</a></li>
   </ul></li>
   <li><a href="#technical-report" id="toc-technical-report" class="nav-link" data-scroll-target="#technical-report">Technical Report</a>
   <ul class="collapse">
@@ -200,6 +200,7 @@ div.csl-indent {
   <li><a href="#clinical-integration" id="toc-clinical-integration" class="nav-link" data-scroll-target="#clinical-integration">Clinical Integration</a></li>
   <li><a href="#evaluation-metrics" id="toc-evaluation-metrics" class="nav-link" data-scroll-target="#evaluation-metrics">Evaluation Metrics</a></li>
   </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -210,68 +211,70 @@ div.csl-indent {
 
 
 
-<section id="final-report" class="level1">
-<h1>Final Report</h1>
-<p><strong>Audio instructions:</strong></p>
-<p>If you want, you can listen to the instructions:</p>
-<audio controls="">
-<source src="../audio/report-page.mp3" type="audio/mpeg">
-</audio>
-<p><sup> <strong>Source</strong>: Text-to-speech conversion done with Amazon Polly on AWS </sup></p>
-<p><code>Note</code>: These audio instructions should not be included in your final submission or repository, once you are done wiht them, please delete the files and remove them from the website.</p>
-<p>This report is designed for a <strong>non-technical audience</strong> (e.g., the general public, executives, marketing teams, or clients), focusing on <strong>high-level insights</strong>, <strong>actionable results</strong>, and <strong>visualizations</strong> to convey the impact without requiring technical knowledge. The goal is to highlight how a model affects business strategy or revenue without diving into complex methods.</p>
-<section id="guidelines-for-creating-a-good-narrative" class="level2">
-<h2 class="anchored" data-anchor-id="guidelines-for-creating-a-good-narrative">Guidelines for Creating a Good Narrative</h2>
-<ul>
-<li><strong>Clear Purpose</strong>: Define the core message or objective early on.</li>
-<li><strong>Know Your Audience</strong>: Adjust language, tone, and detail based on the audience’s understanding.</li>
-<li><strong>Strong Opening</strong>: Start with a hook that sets context and stakes.</li>
-<li><strong>Logical Flow</strong>: Structure with a clear beginning, middle, and end.</li>
-<li><strong>Key Insights</strong>: Highlight the most important points; avoid unnecessary details or jargon.</li>
-<li><strong>Data Support</strong>: Use data to enhance the narrative without overwhelming.</li>
-<li><strong>Visuals</strong>: Incorporate charts to simplify ideas and engage the audience.</li>
-<li><strong>Actionable Takeaways</strong>: Conclude with recommendations or next steps.</li>
-<li><strong>Authenticity</strong>: Use storytelling to make the content engaging and relatable.</li>
-<li><strong>Revise</strong>: Edit for clarity and impact, removing unnecessary content.</li>
-</ul>
+<section id="understanding-breast-and-cervical-cancer-patient-outcomes-and-survival-patterns" class="level1">
+<h1>Understanding Breast and Cervical Cancer: Patient Outcomes and Survival Patterns</h1>
+<section id="executive-summary" class="level2">
+<h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
+<p>Our study examines breast and cervical cancer data from the Cancer Genome Atlas (TCGA) using records from over 1200 patients. Our goal is to identify factors related to survival and explore if any distinct patient groups emerge from the available clinical and demographic data. Throughout the study, we came across several key findings. Overall, breast cancer patients had a higher mortality rate than cervical cancer patients, with 14% versus 7% mortality rates. When analyzing patients that died, cervical cancer patients tend to die much sooner than breast cancer patients. The most influential factors were age at diagnosis and treatment characteristics, with early stage diagnosis significantly associated with longer survival for both cancer types.</p>
+<section id="about-the-study" class="level3">
+<h3 class="anchored" data-anchor-id="about-the-study">About the Study</h3>
+<p>After cleaning and de-duplicating the TCGA dataset, our final dataset contained 1081 breast cancer patients and 184 cervical cancer patients, with average ages of 58 and 47 years, and average survival times of 3.6 and 2.8 years, respectively. The variables we considered were age at diagnosis, cancer stage, treatment information, and vital status. We analyzed survival outcomes after clustering but did not use vital status to create patient groups.</p>
 </section>
-<section id="report-content" class="level2">
-<h2 class="anchored" data-anchor-id="report-content">Report Content</h2>
-<p>These are just examples, you can use any structure that is suitable for your project.</p>
-<section id="case-1-academic-oriented-projects" class="level3">
-<h3 class="anchored" data-anchor-id="case-1-academic-oriented-projects">Case-1: Academic-Oriented Projects</h3>
-<ul>
-<li><strong>Introduction</strong>: Provide an accessible overview and explain the motivation and importance of the research. <em>Example</em>: “This study explores how climate change affects local ecosystems, vital for wildlife conservation.”</li>
-<li><strong>Objective</strong>: Clearly define the research goal and relate it to real-world challenges. <em>Example</em>: “We aim to analyze the effects of air pollution on public health in urban areas.”</li>
-<li><strong>Key Findings</strong>: Present insights without technical terms, focusing on the impact. <em>Example</em>: “Air pollution increases the risk of respiratory diseases by 20%.”</li>
-<li><strong>Methodology Overview</strong>: Briefly explain relevant methods. <em>Example</em>: “We analyzed air quality data from 50 cities and surveyed 10,000 residents.”</li>
-<li><strong>Visualizations</strong>: Use simple graphs and infographics to convey findings. <em>Example</em>: A map showing pollution levels and a bar chart of health risks.</li>
-<li><strong>Societal Implications</strong>: Highlight the broader impact. <em>Example</em>: “This study highlights the need for better air quality policies.”</li>
-<li><strong>Call to Action</strong>: Offer recommendations based on findings. <em>Example</em>: “We recommend city planners invest in green spaces.”</li>
-<li><strong>Conclusion</strong>: Recap the main findings and societal impact. <em>Example</em>: “Understanding pollution’s health impacts will help create healthier cities.”</li>
-</ul>
+<section id="who-are-our-patients" class="level3">
+<h3 class="anchored" data-anchor-id="who-are-our-patients">Who Are our Patients?</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/Age-Diagnosis.png" class="img-fluid figure-img" alt="Age at Diagnosis Distribution BRCA"></p>
+<figcaption>Age at Diagnosis Distribution BRCA</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/Age-Diagnosis-CE.png" class="img-fluid figure-img" alt="Age at Diagnosis Distribution BRCA"></p>
+<figcaption>Age at Diagnosis Distribution CESC</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The average breast cancer patient in our study is 56 years old, with 70% white and approximately 20% Black/African-American patients. 85% of the patients were alive at their last checkup and had received treatment. Most tumors in our breast cancer group were discovered at stage two, because early stage breast cancer does not present any symptoms, and late-stage cancers are typically more severe. Compared to our breast cancer patients, the cervical cancer patients had a younger average age of 47 years. Most were diagnosed at stage one, indicating the efficacy of cervical cancer screening programs such as Pap smears. In our cervical cancer group, 93% of patients were still alive at the follow-up.</p>
 </section>
-<section id="case-2-business-oriented-projects" class="level3">
-<h3 class="anchored" data-anchor-id="case-2-business-oriented-projects">Case-2: Business-Oriented Projects</h3>
-<ul>
-<li><strong>Executive Summary</strong>: Summarize key findings and their relevance to business goals. <em>Example</em>: “This report predicts customer churn and offers strategies to reduce churn by 15%.”</li>
-<li><strong>Objective</strong>: Define the problem or question addressed. <em>Example</em>: “This project aims to identify the drivers of customer churn.”</li>
-<li><strong>Key Insights</strong>: Present the most important, actionable insights. <em>Example</em>: “Customers who interact with support twice within 30 days are 25% less likely to churn.”</li>
-<li><strong>Visualizations</strong>: Use clear graphs to convey key insights. <em>Example</em>: A bar chart showing churn likelihood based on engagement.</li>
-<li><strong>Business Implications</strong>: Explain how findings impact business outcomes and offer specific recommendations. <em>Example</em>: “Focus retention efforts on low-engagement customers.”</li>
-<li><strong>Recommendations</strong>: Provide clear, actionable steps with projections. <em>Example</em>: “Implement an automated retention campaign, reducing churn by 10%.”</li>
-<li><strong>Conclusion</strong>: Summarize findings and suggest next steps. <em>Example</em>: “Addressing churn drivers can reduce loss and improve profitability.”</li>
-<li><strong>Appendix</strong> (Optional): Additional charts or explanations for further insights.</li>
-</ul>
+<section id="what-we-discovered" class="level3">
+<h3 class="anchored" data-anchor-id="what-we-discovered">What We Discovered</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/Time-Stage.png" class="img-fluid figure-img" alt="Survival Time by Stage"></p>
+<figcaption>Survival Time by Stage</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/Time-Tx.png" class="img-fluid figure-img" alt="Survival Time by Treatment Type"></p>
+<figcaption>Survival Time by Treatment Type</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The most surprising discovery we made was that breast cancer had a twofold higher mortality rate than cervical cancer, but cervical cancer patients who did die died much sooner after diagnosis. After diagnosis, breast cancer patients lived an average of 4.3 years, while cervical cancer patients lived an average of 1.8 years, demonstrating that cervical cancer can be life-threatening when it is aggressive. Older breast cancer patients have shorter survival times, while older cervical cancer patients appear to survive longer. Regardless of cancer type, patients diagnosed at stage one lived longer than those diagnosed at later stages, with a particularly large difference in survival time between stage one and stage three. Breast cancer patients under the age of 70 who received treatment had a higher survival rate, whereas breast cancer patients over the age of 70 had similar outcomes regardless of whether they received treatment. This highlights the importance of regular cancer screenings such as mammograms and Pap smears. Immunotherapy produced the best results for breast cancer patients, followed by chemotherapy. Radiation combination therapy produced the best results for cervical cancer patients.</p>
 </section>
+<section id="can-we-predict-survival" class="level3">
+<h3 class="anchored" data-anchor-id="can-we-predict-survival">Can we predict survival?</h3>
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/Time-Cluster.png" class="img-fluid figure-img" alt="Survival Time by Cluster"></p>
+<figcaption>Survival Time by Cluster</figcaption>
+</figure>
+</div>
+</div>
+<p>Our study used machine learning models to predict how long patients would live based on the clinical information we had. Our best model predicted survival times that were within two years of the actual outcomes. Because the outcomes of these cancers are highly variable, some patients live for many years while others live for much shorter periods of time, the model captures broad patterns but cannot predict precisely at an individual level. There were four important factors for predicting survival: age at diagnosis, cancer stage, number of treatments, and treatment type. Younger patients had better outcomes, earlier cancer stage meant longer survival, more treatments correlated with different outcomes, and specific therapies produced better results. We also investigated whether smoking affected cervical cancer outcomes, but could not draw conclusions about the effects on survival. The majority of our patients reported that they did not smoke.</p>
+<p>We combined our data to see if there were any clustering patterns, and our analysis identified three groups of patients: group one had 100% breast cancer patients with a 14.7% mortality rate and an average survival of 3.7 years; group two had 100% breast cancer patients with a 12.3% mortality rate and an average survival of 2.8 years; and group three had cervical cancer patients with a 7.1% mortality rate and an average survival of three years. These cluster groups reflect cancer types, which makes clinical sense, demonstrating that breast and cervical cancer require different approaches and treatments.</p>
 </section>
-<section id="final-tips" class="level2">
-<h2 class="anchored" data-anchor-id="final-tips">Final Tips</h2>
-<ul>
-<li><strong>Simplicity</strong>: Avoid jargon; focus on business-relevant insights.</li>
-<li><strong>Visual Focus</strong>: Prioritize charts and graphs over dense text.</li>
-<li><strong>Emphasize Impact</strong>: Always link data insights to business outcomes.</li>
-</ul>
 </section>
 </section>
 <section id="technical-report" class="level1">
@@ -417,10 +420,14 @@ BEST MODEL: Random Forest Regressor
 <li><strong>Subgroup Analysis</strong>: Evaluate model performance across demographic and clinical subgroups to assess fairness</li>
 <li><strong>Calibration Assessment</strong>: Ensure predicted survival probabilities match observed outcomes across risk levels</li>
 </ul>
-
-
-
 </section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Our analysis revealed significant patterns in cervical cancer outcomes, and while these two cancers affect women. Their behavior is quite different in general breast. Cancer may be more fatal, but cervical cancer may be rapidly aggressive when it becomes life-threatening. Our data consistently points to one message: early detection saves lives. This includes her patience receiving regular screenings, understanding your stage, and thoroughly discussing treatment options with healthcare providers. This means that patients with cervical cancer who demonstrate signs of progression may require more aggressive monitoring. Age plays an important role in treatment decisions, and comprehensive data collection, particularly around lifecycle factors, would improve the ability to understand and predict outcomes.</p>
+
+
+
 </section>
 </section>
 

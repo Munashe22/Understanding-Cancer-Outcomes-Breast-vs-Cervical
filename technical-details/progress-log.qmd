@@ -68,15 +68,47 @@ Project roles:
 * [x] Website edits
 
 
-## Member-2
+## Betsiet Delelegn
 
-Provide their name, a link to their "About Me" page.
+[About Me](../index.qmd#about-us)
 
-Also, describe a log of their project roles.
+Project roles:
+
+* [x] Literature Review
+* [x] Dimensionality Reduction
+* [x] Clustering Analysis (Unsupervised Learning)
+* [x] Non-Technical Report
 
 **Weekly project contribution log:**
 
+**11-08-2025** 
 
-**W: 10-16-2024** 
+* [x] Brainstormed topics; initially explored Cherry Blossom Prediction data and NOAA API
 
-* [x] Attend first group meeting
+**11-15-2025** 
+
+* [x] Pivoted to breast cancer data for project focus
+
+**11-17-2025** 
+
+* [x] Project brainstorm with partner, landing on breast and cervical cancer survival analysis using TCGA data
+* [x] Began literature review on cancer survival patterns and TCGA methodology
+
+**12-02-2025** 
+
+* [x] Initial dimensionality reduction experiments 
+
+**12-06-2025** 
+
+* [x] Completed dimensionality reduction 
+* [x] Clustering analysis—K
+* [x] Statistical validation
+
+**12-13-2025** 
+
+* [x] Finalized unsupervised learning notebook
+* [x] Non-technical report
+
+**12-16-2025** 
+
+* [x] Final revisions 

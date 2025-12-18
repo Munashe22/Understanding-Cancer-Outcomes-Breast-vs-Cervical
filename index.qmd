@@ -4,11 +4,22 @@ title: "Landing page"
 
 ## About the Project
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Our project investigates survival patterns in breast cancer and cervical cancer using data from The Cancer Genome Atlas. Cancer patients with the same diagnosis expirence different outcomes based on several factors whether it is treatment recieved, age, cancer stage and other clinical factors. Understanding these patterns will assist in improving patient care and personalizing medicines. Our analysis combines unsupervised learning and supervised learning to identify patient subgroups, predict survival time, and identify top important prognotic factors.
+
+**Key Questions:** 
+- What distinct patient subgroups exist within breast and cervical cancer? 
+- How do mortality patterns differ between these cancers, and why? 
+- Which clinical features most strongly predict survival outcomes? 
+- What are the key prognostic factors for each cancer type?
 
 ## Literature Review
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+To better understand survival patterns in breast cancer (BRCA) and cervical cancer (CESC), multiple intersecting factors should be investigated. The Cancer Genome Atlas (TCGA) has revealed that even with the same diagnosis, different cancer subtypes exist. Known clinical features that predict survival include stage at diagnosis, age, and treatment type, but these may not be equally important for cervical versus breast cancer.
+
+Research on cervical cancer discovered patterns that predict treatment response while, breast cancer research has categorized patients based on hormone receptors and genetic characteristics. These cancers also differ in their key predictive factors: cervical cancer outcomes are heavily influenced by HPV status, cell type, and early detection via pap smears, while breast cancer outcomes are influenced by hormone receptor status and HER2 amplification. Treatment approaches also differ substantially, with breast cancer benefiting more from targeted therapies and cervical cancer relying more on radiation and surgery.
+
+Given these complex differences, machine learning offers powerful analytical tools. Unsupervised learning methods have shown to identify patient subgroups by revealing cluster structures in clinical and demographic data. Random Forest models excel at predicting survival and comparing feature importance across cancers. Our study combines both unsupervised and supervised approaches, providing a comprehensive framework for understanding what determines survival in cancer patients.
+
 
 ## About Us
 
@@ -23,12 +34,12 @@ Munashe focuses on applied data science for social impact, with research interes
 [LinkedIn](https://www.linkedin.com/in/munashe-mhlanga/)
 :::
 ::: column width="50%"
-![Betsy](assets/munashe-mhlanga.png){width=70% alt = "Betsy portrait"}
+![Betsy](assets/betsiet-delelegn.png){width=70% alt = "Betsy portrait"}
 
-**Betsy**  
-Department / Institution  
+**Betsiet Delelegn**  
+MS Data Science & Analytics, Georgetown University
 
-Placeholder Text.
+[LinkedIn](https://www.linkedin.com/in/betsiedelelegn/)
 :::
 :::
 
