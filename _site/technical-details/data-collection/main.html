@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Data Collection – DSAN-5000: Project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/gu-logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">DSAN-5000: Project</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../instructions/overview.qmd"> 
+<span class="menu-text">Instructions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../report/report.html"> 
+<span class="menu-text">Report</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-technical-details" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Technical details</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-technical-details">    
+        <li>
+    <a class="dropdown-item" href="../../technical-details/data-collection/main.html">
+ <span class="dropdown-text">Data-collection</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../technical-details/data-cleaning/main.html">
+ <span class="dropdown-text">Data-cleaning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../technical-details/eda/main.html">
+ <span class="dropdown-text">Exploratory Data Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../technical-details/unsupervised-learning/main.html">
+ <span class="dropdown-text">Unsupervised Learning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../technical-details/supervised-learning/main.html">
+ <span class="dropdown-text">Supervised Learning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../technical-details/progress-log.html">
+ <span class="dropdown-text">Progress Log</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../technical-details/llm-usage-log.html">
+ <span class="dropdown-text">LLM usage Log</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data Source</a></li>
+  <li><a href="#data-collection-methods" id="toc-data-collection-methods" class="nav-link" data-scroll-target="#data-collection-methods">Data Collection Methods</a></li>
+  <li><a href="#data-structure-and-format" id="toc-data-structure-and-format" class="nav-link" data-scroll-target="#data-structure-and-format">Data Structure and Format</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  </ul></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a>
+  <ul class="collapse">
+  <li><a href="#breast-brca-cancer-dataset" id="toc-breast-brca-cancer-dataset" class="nav-link" data-scroll-target="#breast-brca-cancer-dataset">Breast (BRCA) Cancer Dataset</a></li>
+  <li><a href="#cervical-cesc-cancer-dataset" id="toc-cervical-cesc-cancer-dataset" class="nav-link" data-scroll-target="#cervical-cesc-cancer-dataset">Cervical (CESC) Cancer Dataset</a>
+  <ul class="collapse">
+  <li><a href="#clinical-data" id="toc-clinical-data" class="nav-link" data-scroll-target="#clinical-data">Clinical Data</a></li>
+  <li><a href="#exposure-data" id="toc-exposure-data" class="nav-link" data-scroll-target="#exposure-data">Exposure Data</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Collection</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<section id="data-source" class="level2">
+<h2 class="anchored" data-anchor-id="data-source">Data Source</h2>
+<p>The data used in this project were obtained from the <strong>National Cancer Institute (NCI) Genomic Data Commons (GDC)</strong><span class="citation" data-cites="nci_gdc_docs"><sup><a href="#ref-nci_gdc_docs" role="doc-biblioref">1</a></sup></span>, a centralized repository designed to support cancer research by providing harmonized clinical, genomic, and exposure-related data across multiple cancer types. The GDC integrates data from large-scale initiatives such as <strong>The Cancer Genome Atlas (TCGA)</strong><span class="citation" data-cites="tcga_program"><sup><a href="#ref-tcga_program" role="doc-biblioref">2</a></sup></span> and applies standardized data models, vocabularies, and quality control procedures to ensure consistency and reproducibility across studies.</p>
+<p><img src="../../assets/data-source.png" class="img-fluid" alt="National Cancer Institute (NCI) Genomic Data Commons (GDC)">{alt = “National Cancer Institute Genomic Data Commons home page”}</p>
+</section>
+<section id="data-collection-methods" class="level2">
+<h2 class="anchored" data-anchor-id="data-collection-methods">Data Collection Methods</h2>
+<p>For this analysis, we focused on two TCGA cohorts: <strong>Breast Invasive Carcinoma (TCGA-BRCA) and Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma (TCGA-CESC)</strong>. These datasets were selected to enable comparative analysis of two common cancers affecting women, while allowing investigation into differences in tumor characteristics, treatment patterns, and survival outcomes.</p>
+<p>Clinical data were downloaded from the GDC Data Portal in tabular format (<code>clinical.tsv</code> and related files), which aggregate information across several hierarchical entities, including <strong>cases, demographic, diagnoses, treatments,</strong> and <strong>exposures.</strong> Variables include patient-level demographics (e.g., age at diagnosis, race, vital status), tumor-specific characteristics (e.g., stage, grade, morphology), treatment indicators (e.g., treatment type), and outcome-related fields (e.g., days to last follow-up). All time-to-event variables in the GDC are reported in <strong>days</strong>, indexed relative to clinically meaningful anchor points such as diagnosis or enrollment dates.</p>
+<p><img src="../../assets/tcga-source.png" class="img-fluid" alt="TCGA-CESC (Cervical Cancer Example Download)">{alt = “National Cancer Institute Genomic Data Commons data download page”}</p>
+</section>
+<section id="data-structure-and-format" class="level2">
+<h2 class="anchored" data-anchor-id="data-structure-and-format">Data Structure and Format</h2>
+<p>Importantly, the GDC data are <strong>de-identified</strong> to protect patient privacy, and certain variables may be obfuscated or missing by design. For example, ages above a threshold may be masked, dates may be offset, and exposure variables such as smoking status may be underreported. Additionally, patients may have <strong>multiple rows per case</strong>, reflecting repeated diagnoses, treatments, or follow-up events, necessitating aggregation and careful preprocessing prior to modeling.</p>
+<pre class="{python}"><code>#| echo: false
+#| warning: false
+#| tbl-cap: Rows showing a unique patient (cases.submitter_id) and their different treatments for breast cancer
+import pandas as pd
+
+# Import dataset
+brca_df = pd.read_csv("../../data/raw-data/brca/brca-clinical.tsv", sep="\t")
+
+# Show rows for patient TCGA-E2-A1IU with selected columns
+patient_data = brca_df[brca_df["cases.submitter_id"] == "TCGA-E2-A1IU"]
+columns_to_show = ["cases.submitter_id", "treatments.treatment_type", 
+                   "treatments.treatment_intent_type", "demographic.vital_status",
+                   "diagnoses.ajcc_pathologic_stage"]
+patient_data[columns_to_show]
+</code></pre>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>While TCGA cohorts are not fully representative of the general U.S. population, they remain one of the most comprehensive publicly available cancer datasets, widely used in both biomedical and data science research. The use of GDC data enables reproducible analysis while providing sufficient clinical depth to explore survival patterns and predictive modeling across cancer types.</p>
+<p>Our raw data can be found in our repository <a href="https://github.com/dsan-5000/fall-2025-project-Munashe22/tree/main/data">here</a>, including a data dictionary.</p>
+<p>As of 11/05/2025, - the clinical breast cancer dataset originally has 5546 rows and 210 columns representing 1098 patients - the clinical cervical cancer dataset originally has 1535 rows and 210 columns representing 307 patients</p>
+</section>
+</section>
+<section id="code" class="level1">
+<h1>Code</h1>
+<div id="0235b877" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import necessary libraries</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="breast-brca-cancer-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="breast-brca-cancer-dataset">Breast (BRCA) Cancer Dataset</h2>
+<div id="2a064aed" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Open BRCA clinical tsv data</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>brca <span class="op">=</span> pd.read_csv(<span class="st">'../../data/raw-data/brca/brca-clinical.tsv'</span>, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>brca.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/var/folders/pk/q040shz17k97bg4ndnn1q0b00000gn/T/ipykernel_45563/1166326151.py:3: DtypeWarning: Columns (10) have mixed types. Specify dtype option on import or set low_memory=False.
+  brca = pd.read_csv('../../data/raw-data/brca/brca-clinical.tsv', sep='\t')</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">project.project_id</th>
+<th data-quarto-table-cell-role="th">cases.case_id</th>
+<th data-quarto-table-cell-role="th">cases.consent_type</th>
+<th data-quarto-table-cell-role="th">cases.days_to_consent</th>
+<th data-quarto-table-cell-role="th">cases.days_to_lost_to_followup</th>
+<th data-quarto-table-cell-role="th">cases.disease_type</th>
+<th data-quarto-table-cell-role="th">cases.index_date</th>
+<th data-quarto-table-cell-role="th">cases.lost_to_followup</th>
+<th data-quarto-table-cell-role="th">cases.primary_site</th>
+<th data-quarto-table-cell-role="th">cases.submitter_id</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_duration</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_effect</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_effect_indicator</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_frequency</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_id</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_intent_type</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_or_therapy</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_outcome</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_outcome_duration</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>TCGA-BRCA</td>
+<td>001cef41-ff86-4d3f-a140-a647ac4b10a1</td>
+<td>Informed Consent</td>
+<td>-34</td>
+<td>'--</td>
+<td>Ductal and Lobular Neoplasms</td>
+<td>Diagnosis</td>
+<td>'--</td>
+<td>Breast</td>
+<td>TCGA-E2-A1IU</td>
+<td>...</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>1b884f21-eb24-467f-aba2-208af17070b9</td>
+<td>Adjuvant</td>
+<td>no</td>
+<td>'--</td>
+<td>'--</td>
+<td>Radiation Therapy, NOS</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>TCGA-BRCA</td>
+<td>001cef41-ff86-4d3f-a140-a647ac4b10a1</td>
+<td>Informed Consent</td>
+<td>-34</td>
+<td>'--</td>
+<td>Ductal and Lobular Neoplasms</td>
+<td>Diagnosis</td>
+<td>'--</td>
+<td>Breast</td>
+<td>TCGA-E2-A1IU</td>
+<td>...</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>27868bc3-23c8-5e85-a0e2-314e6cdf9b2a</td>
+<td>Adjuvant</td>
+<td>yes</td>
+<td>Treatment Ongoing</td>
+<td>'--</td>
+<td>Hormone Therapy</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>TCGA-BRCA</td>
+<td>001cef41-ff86-4d3f-a140-a647ac4b10a1</td>
+<td>Informed Consent</td>
+<td>-34</td>
+<td>'--</td>
+<td>Ductal and Lobular Neoplasms</td>
+<td>Diagnosis</td>
+<td>'--</td>
+<td>Breast</td>
+<td>TCGA-E2-A1IU</td>
+<td>...</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>aedf144c-6b7b-4d76-a3cb-4271aef10f1d</td>
+<td>First-Line Therapy</td>
+<td>yes</td>
+<td>'--</td>
+<td>'--</td>
+<td>Surgery, NOS</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>TCGA-BRCA</td>
+<td>0045349c-69d9-4306-a403-c9c1fa836644</td>
+<td>Informed Consent</td>
+<td>76</td>
+<td>'--</td>
+<td>Adenomas and Adenocarcinomas</td>
+<td>Diagnosis</td>
+<td>'--</td>
+<td>Breast</td>
+<td>TCGA-A1-A0SB</td>
+<td>...</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>0a534cae-de91-5e77-a3e7-b52d46bd3966</td>
+<td>First-Line Therapy</td>
+<td>yes</td>
+<td>'--</td>
+<td>'--</td>
+<td>Surgery, NOS</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>TCGA-BRCA</td>
+<td>00807dae-9f4a-4fd1-aac2-82eb11bf2afb</td>
+<td>Informed Consent</td>
+<td>19</td>
+<td>'--</td>
+<td>Adnexal and Skin Appendage Neoplasms</td>
+<td>Diagnosis</td>
+<td>No</td>
+<td>Breast</td>
+<td>TCGA-A2-A04W</td>
+<td>...</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>024faa94-ec57-4d14-b919-62dcab409958</td>
+<td>Adjuvant</td>
+<td>yes</td>
+<td>Treatment Ongoing</td>
+<td>'--</td>
+<td>Bisphosphonate Therapy</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 210 columns</p>
+</div>
+</div>
+</div>
+<div id="0a37941f" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>nrow, ncol <span class="op">=</span> brca.shape</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'The data has </span><span class="sc">{</span>nrow<span class="sc">}</span><span class="ss"> rows and </span><span class="sc">{</span>ncol<span class="sc">}</span><span class="ss"> columns.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The data has 5546 rows and 210 columns.</code></pre>
+</div>
+</div>
+<div id="1b63c279" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List column names</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Column names:"</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(brca.columns.tolist())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Column names:
+['project.project_id', 'cases.case_id', 'cases.consent_type', 'cases.days_to_consent', 'cases.days_to_lost_to_followup', 'cases.disease_type', 'cases.index_date', 'cases.lost_to_followup', 'cases.primary_site', 'cases.submitter_id', 'demographic.age_at_index', 'demographic.age_is_obfuscated', 'demographic.cause_of_death', 'demographic.cause_of_death_source', 'demographic.country_of_birth', 'demographic.country_of_residence_at_enrollment', 'demographic.days_to_birth', 'demographic.days_to_death', 'demographic.demographic_id', 'demographic.education_level', 'demographic.ethnicity', 'demographic.gender', 'demographic.marital_status', 'demographic.occupation_duration_years', 'demographic.population_group', 'demographic.premature_at_birth', 'demographic.race', 'demographic.submitter_id', 'demographic.vital_status', 'demographic.weeks_gestation_at_birth', 'demographic.year_of_birth', 'demographic.year_of_death', 'diagnoses.adrenal_hormone', 'diagnoses.age_at_diagnosis', 'diagnoses.ajcc_clinical_m', 'diagnoses.ajcc_clinical_n', 'diagnoses.ajcc_clinical_stage', 'diagnoses.ajcc_clinical_t', 'diagnoses.ajcc_pathologic_m', 'diagnoses.ajcc_pathologic_n', 'diagnoses.ajcc_pathologic_stage', 'diagnoses.ajcc_pathologic_t', 'diagnoses.ajcc_serum_tumor_markers', 'diagnoses.ajcc_staging_system_edition', 'diagnoses.ann_arbor_b_symptoms', 'diagnoses.ann_arbor_b_symptoms_described', 'diagnoses.ann_arbor_clinical_stage', 'diagnoses.ann_arbor_extranodal_involvement', 'diagnoses.ann_arbor_pathologic_stage', 'diagnoses.best_overall_response', 'diagnoses.burkitt_lymphoma_clinical_variant', 'diagnoses.calgb_risk_group', 'diagnoses.cancer_detection_method', 'diagnoses.child_pugh_classification', 'diagnoses.clark_level', 'diagnoses.classification_of_tumor', 'diagnoses.cog_liver_stage', 'diagnoses.cog_neuroblastoma_risk_group', 'diagnoses.cog_renal_stage', 'diagnoses.cog_rhabdomyosarcoma_risk_group', 'diagnoses.contiguous_organ_invaded', 'diagnoses.days_to_best_overall_response', 'diagnoses.days_to_diagnosis', 'diagnoses.days_to_last_follow_up', 'diagnoses.days_to_last_known_disease_status', 'diagnoses.days_to_recurrence', 'diagnoses.diagnosis_id', 'diagnoses.diagnosis_is_primary_disease', 'diagnoses.double_expressor_lymphoma', 'diagnoses.double_hit_lymphoma', 'diagnoses.eln_risk_classification', 'diagnoses.enneking_msts_grade', 'diagnoses.enneking_msts_metastasis', 'diagnoses.enneking_msts_stage', 'diagnoses.enneking_msts_tumor_site', 'diagnoses.ensat_clinical_m', 'diagnoses.ensat_pathologic_n', 'diagnoses.ensat_pathologic_stage', 'diagnoses.ensat_pathologic_t', 'diagnoses.esophageal_columnar_dysplasia_degree', 'diagnoses.esophageal_columnar_metaplasia_present', 'diagnoses.fab_morphology_code', 'diagnoses.figo_stage', 'diagnoses.figo_staging_edition_year', 'diagnoses.first_symptom_longest_duration', 'diagnoses.first_symptom_prior_to_diagnosis', 'diagnoses.gastric_esophageal_junction_involvement', 'diagnoses.gleason_grade_group', 'diagnoses.gleason_grade_tertiary', 'diagnoses.gleason_patterns_percent', 'diagnoses.gleason_score', 'diagnoses.goblet_cells_columnar_mucosa_present', 'diagnoses.icd_10_code', 'diagnoses.igcccg_stage', 'diagnoses.inpc_grade', 'diagnoses.inpc_histologic_group', 'diagnoses.inrg_stage', 'diagnoses.inss_stage', 'diagnoses.international_prognostic_index', 'diagnoses.irs_group', 'diagnoses.irs_stage', 'diagnoses.ishak_fibrosis_score', 'diagnoses.iss_stage', 'diagnoses.last_known_disease_status', 'diagnoses.laterality', 'diagnoses.margin_distance', 'diagnoses.margins_involved_site', 'diagnoses.masaoka_stage', 'diagnoses.max_tumor_bulk_site', 'diagnoses.medulloblastoma_molecular_classification', 'diagnoses.melanoma_known_primary', 'diagnoses.metastasis_at_diagnosis', 'diagnoses.metastasis_at_diagnosis_site', 'diagnoses.method_of_diagnosis', 'diagnoses.micropapillary_features', 'diagnoses.mitosis_karyorrhexis_index', 'diagnoses.mitotic_count', 'diagnoses.morphology', 'diagnoses.ovarian_specimen_status', 'diagnoses.ovarian_surface_involvement', 'diagnoses.papillary_renal_cell_type', 'diagnoses.pediatric_kidney_staging', 'diagnoses.peritoneal_fluid_cytological_status', 'diagnoses.pregnant_at_diagnosis', 'diagnoses.primary_diagnosis', 'diagnoses.primary_disease', 'diagnoses.primary_gleason_grade', 'diagnoses.prior_malignancy', 'diagnoses.prior_treatment', 'diagnoses.progression_or_recurrence', 'diagnoses.residual_disease', 'diagnoses.satellite_nodule_present', 'diagnoses.secondary_gleason_grade', 'diagnoses.site_of_resection_or_biopsy', 'diagnoses.sites_of_involvement', 'diagnoses.sites_of_involvement_count', 'diagnoses.submitter_id', 'diagnoses.supratentorial_localization', 'diagnoses.synchronous_malignancy', 'diagnoses.tissue_or_organ_of_origin', 'diagnoses.tumor_burden', 'diagnoses.tumor_confined_to_organ_of_origin', 'diagnoses.tumor_depth', 'diagnoses.tumor_focality', 'diagnoses.tumor_grade', 'diagnoses.tumor_grade_category', 'diagnoses.tumor_of_origin', 'diagnoses.tumor_regression_grade', 'diagnoses.uicc_clinical_m', 'diagnoses.uicc_clinical_n', 'diagnoses.uicc_clinical_stage', 'diagnoses.uicc_clinical_t', 'diagnoses.uicc_pathologic_m', 'diagnoses.uicc_pathologic_n', 'diagnoses.uicc_pathologic_stage', 'diagnoses.uicc_pathologic_t', 'diagnoses.uicc_staging_system_edition', 'diagnoses.ulceration_indicator', 'diagnoses.weiss_assessment_findings', 'diagnoses.weiss_assessment_score', 'diagnoses.who_cns_grade', 'diagnoses.who_nte_grade', 'diagnoses.wilms_tumor_histologic_subtype', 'diagnoses.year_of_diagnosis', 'treatments.chemo_concurrent_to_radiation', 'treatments.clinical_trial_indicator', 'treatments.course_number', 'treatments.days_to_treatment_end', 'treatments.days_to_treatment_start', 'treatments.drug_category', 'treatments.embolic_agent', 'treatments.initial_disease_status', 'treatments.lesions_treated_number', 'treatments.margin_distance', 'treatments.margin_status', 'treatments.margins_involved_site', 'treatments.number_of_cycles', 'treatments.number_of_fractions', 'treatments.prescribed_dose', 'treatments.prescribed_dose_units', 'treatments.pretreatment', 'treatments.protocol_identifier', 'treatments.radiosensitizing_agent', 'treatments.reason_treatment_ended', 'treatments.reason_treatment_not_given', 'treatments.regimen_or_line_of_therapy', 'treatments.residual_disease', 'treatments.route_of_administration', 'treatments.submitter_id', 'treatments.therapeutic_agents', 'treatments.therapeutic_level_achieved', 'treatments.therapeutic_levels_achieved', 'treatments.therapeutic_target_level', 'treatments.timepoint_category', 'treatments.treatment_anatomic_site', 'treatments.treatment_anatomic_sites', 'treatments.treatment_arm', 'treatments.treatment_dose', 'treatments.treatment_dose_max', 'treatments.treatment_dose_units', 'treatments.treatment_duration', 'treatments.treatment_effect', 'treatments.treatment_effect_indicator', 'treatments.treatment_frequency', 'treatments.treatment_id', 'treatments.treatment_intent_type', 'treatments.treatment_or_therapy', 'treatments.treatment_outcome', 'treatments.treatment_outcome_duration', 'treatments.treatment_type']</code></pre>
+</div>
+</div>
+<div id="839dbff7" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of unique patients</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>unique_patients <span class="op">=</span> brca[<span class="st">'cases.submitter_id'</span>].nunique()</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'The data has </span><span class="sc">{</span>unique_patients<span class="sc">}</span><span class="ss"> unique patients.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The data has 1098 unique patients.</code></pre>
+</div>
+</div>
+</section>
+<section id="cervical-cesc-cancer-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="cervical-cesc-cancer-dataset">Cervical (CESC) Cancer Dataset</h2>
+<section id="clinical-data" class="level3">
+<h3 class="anchored" data-anchor-id="clinical-data">Clinical Data</h3>
+<div id="ec804cac" class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Open CESC tsv data</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>cesc <span class="op">=</span> pd.read_csv(<span class="st">'../../data/raw-data/cesc/cesc-clinical.tsv'</span>, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>cesc.head(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">project.project_id</th>
+<th data-quarto-table-cell-role="th">cases.case_id</th>
+<th data-quarto-table-cell-role="th">cases.consent_type</th>
+<th data-quarto-table-cell-role="th">cases.days_to_consent</th>
+<th data-quarto-table-cell-role="th">cases.days_to_lost_to_followup</th>
+<th data-quarto-table-cell-role="th">cases.disease_type</th>
+<th data-quarto-table-cell-role="th">cases.index_date</th>
+<th data-quarto-table-cell-role="th">cases.lost_to_followup</th>
+<th data-quarto-table-cell-role="th">cases.primary_site</th>
+<th data-quarto-table-cell-role="th">cases.submitter_id</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_duration</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_effect</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_effect_indicator</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_frequency</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_id</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_intent_type</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_or_therapy</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_outcome</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_outcome_duration</th>
+<th data-quarto-table-cell-role="th">treatments.treatment_type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>TCGA-CESC</td>
+<td>00ad0ffe-2105-4829-a495-1c2aceb5bb31</td>
+<td>Informed Consent</td>
+<td>0</td>
+<td>'--</td>
+<td>Squamous Cell Neoplasms</td>
+<td>Diagnosis</td>
+<td>Yes</td>
+<td>Cervix uteri</td>
+<td>TCGA-EK-A2R9</td>
+<td>...</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>672b3cf9-bb40-4f6f-a1c9-69ac3383fbd5</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>Hysterectomy, NOS</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>TCGA-CESC</td>
+<td>00ad0ffe-2105-4829-a495-1c2aceb5bb31</td>
+<td>Informed Consent</td>
+<td>0</td>
+<td>'--</td>
+<td>Squamous Cell Neoplasms</td>
+<td>Diagnosis</td>
+<td>Yes</td>
+<td>Cervix uteri</td>
+<td>TCGA-EK-A2R9</td>
+<td>...</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>d4baa31f-8c1f-5333-afcd-836816fd1a2a</td>
+<td>Adjuvant</td>
+<td>unknown</td>
+<td>'--</td>
+<td>'--</td>
+<td>Pharmaceutical Therapy, NOS</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>TCGA-CESC</td>
+<td>00ad0ffe-2105-4829-a495-1c2aceb5bb31</td>
+<td>Informed Consent</td>
+<td>0</td>
+<td>'--</td>
+<td>Squamous Cell Neoplasms</td>
+<td>Diagnosis</td>
+<td>Yes</td>
+<td>Cervix uteri</td>
+<td>TCGA-EK-A2R9</td>
+<td>...</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>e79370ba-36f0-4639-bc8f-119ba2b2457b</td>
+<td>Adjuvant</td>
+<td>unknown</td>
+<td>'--</td>
+<td>'--</td>
+<td>Radiation Therapy, NOS</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>TCGA-CESC</td>
+<td>00bca18c-b3d4-45a3-8f19-034cc40449a4</td>
+<td>Informed Consent</td>
+<td>2108</td>
+<td>'--</td>
+<td>Squamous Cell Neoplasms</td>
+<td>Diagnosis</td>
+<td>Yes</td>
+<td>Cervix uteri</td>
+<td>TCGA-C5-A2LV</td>
+<td>...</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>277d525e-9674-4954-b427-3e829d469b8f</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>Hysterectomy, NOS</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>TCGA-CESC</td>
+<td>00bca18c-b3d4-45a3-8f19-034cc40449a4</td>
+<td>Informed Consent</td>
+<td>2108</td>
+<td>'--</td>
+<td>Squamous Cell Neoplasms</td>
+<td>Diagnosis</td>
+<td>Yes</td>
+<td>Cervix uteri</td>
+<td>TCGA-C5-A2LV</td>
+<td>...</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>788ff156-d009-46f7-b832-f39b11ed13ac</td>
+<td>Adjuvant</td>
+<td>no</td>
+<td>'--</td>
+<td>'--</td>
+<td>Radiation Therapy, NOS</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 210 columns</p>
+</div>
+</div>
+</div>
+<div id="693eec1f" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>nrow, ncol <span class="op">=</span> cesc.shape</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'The data has </span><span class="sc">{</span>nrow<span class="sc">}</span><span class="ss"> rows and </span><span class="sc">{</span>ncol<span class="sc">}</span><span class="ss"> columns.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The data has 1535 rows and 210 columns.</code></pre>
+</div>
+</div>
+<div id="e3da0bd2" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List column names</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Column names:"</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cesc.columns.tolist())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Column names:
+['project.project_id', 'cases.case_id', 'cases.consent_type', 'cases.days_to_consent', 'cases.days_to_lost_to_followup', 'cases.disease_type', 'cases.index_date', 'cases.lost_to_followup', 'cases.primary_site', 'cases.submitter_id', 'demographic.age_at_index', 'demographic.age_is_obfuscated', 'demographic.cause_of_death', 'demographic.cause_of_death_source', 'demographic.country_of_birth', 'demographic.country_of_residence_at_enrollment', 'demographic.days_to_birth', 'demographic.days_to_death', 'demographic.demographic_id', 'demographic.education_level', 'demographic.ethnicity', 'demographic.gender', 'demographic.marital_status', 'demographic.occupation_duration_years', 'demographic.population_group', 'demographic.premature_at_birth', 'demographic.race', 'demographic.submitter_id', 'demographic.vital_status', 'demographic.weeks_gestation_at_birth', 'demographic.year_of_birth', 'demographic.year_of_death', 'diagnoses.adrenal_hormone', 'diagnoses.age_at_diagnosis', 'diagnoses.ajcc_clinical_m', 'diagnoses.ajcc_clinical_n', 'diagnoses.ajcc_clinical_stage', 'diagnoses.ajcc_clinical_t', 'diagnoses.ajcc_pathologic_m', 'diagnoses.ajcc_pathologic_n', 'diagnoses.ajcc_pathologic_stage', 'diagnoses.ajcc_pathologic_t', 'diagnoses.ajcc_serum_tumor_markers', 'diagnoses.ajcc_staging_system_edition', 'diagnoses.ann_arbor_b_symptoms', 'diagnoses.ann_arbor_b_symptoms_described', 'diagnoses.ann_arbor_clinical_stage', 'diagnoses.ann_arbor_extranodal_involvement', 'diagnoses.ann_arbor_pathologic_stage', 'diagnoses.best_overall_response', 'diagnoses.burkitt_lymphoma_clinical_variant', 'diagnoses.calgb_risk_group', 'diagnoses.cancer_detection_method', 'diagnoses.child_pugh_classification', 'diagnoses.clark_level', 'diagnoses.classification_of_tumor', 'diagnoses.cog_liver_stage', 'diagnoses.cog_neuroblastoma_risk_group', 'diagnoses.cog_renal_stage', 'diagnoses.cog_rhabdomyosarcoma_risk_group', 'diagnoses.contiguous_organ_invaded', 'diagnoses.days_to_best_overall_response', 'diagnoses.days_to_diagnosis', 'diagnoses.days_to_last_follow_up', 'diagnoses.days_to_last_known_disease_status', 'diagnoses.days_to_recurrence', 'diagnoses.diagnosis_id', 'diagnoses.diagnosis_is_primary_disease', 'diagnoses.double_expressor_lymphoma', 'diagnoses.double_hit_lymphoma', 'diagnoses.eln_risk_classification', 'diagnoses.enneking_msts_grade', 'diagnoses.enneking_msts_metastasis', 'diagnoses.enneking_msts_stage', 'diagnoses.enneking_msts_tumor_site', 'diagnoses.ensat_clinical_m', 'diagnoses.ensat_pathologic_n', 'diagnoses.ensat_pathologic_stage', 'diagnoses.ensat_pathologic_t', 'diagnoses.esophageal_columnar_dysplasia_degree', 'diagnoses.esophageal_columnar_metaplasia_present', 'diagnoses.fab_morphology_code', 'diagnoses.figo_stage', 'diagnoses.figo_staging_edition_year', 'diagnoses.first_symptom_longest_duration', 'diagnoses.first_symptom_prior_to_diagnosis', 'diagnoses.gastric_esophageal_junction_involvement', 'diagnoses.gleason_grade_group', 'diagnoses.gleason_grade_tertiary', 'diagnoses.gleason_patterns_percent', 'diagnoses.gleason_score', 'diagnoses.goblet_cells_columnar_mucosa_present', 'diagnoses.icd_10_code', 'diagnoses.igcccg_stage', 'diagnoses.inpc_grade', 'diagnoses.inpc_histologic_group', 'diagnoses.inrg_stage', 'diagnoses.inss_stage', 'diagnoses.international_prognostic_index', 'diagnoses.irs_group', 'diagnoses.irs_stage', 'diagnoses.ishak_fibrosis_score', 'diagnoses.iss_stage', 'diagnoses.last_known_disease_status', 'diagnoses.laterality', 'diagnoses.margin_distance', 'diagnoses.margins_involved_site', 'diagnoses.masaoka_stage', 'diagnoses.max_tumor_bulk_site', 'diagnoses.medulloblastoma_molecular_classification', 'diagnoses.melanoma_known_primary', 'diagnoses.metastasis_at_diagnosis', 'diagnoses.metastasis_at_diagnosis_site', 'diagnoses.method_of_diagnosis', 'diagnoses.micropapillary_features', 'diagnoses.mitosis_karyorrhexis_index', 'diagnoses.mitotic_count', 'diagnoses.morphology', 'diagnoses.ovarian_specimen_status', 'diagnoses.ovarian_surface_involvement', 'diagnoses.papillary_renal_cell_type', 'diagnoses.pediatric_kidney_staging', 'diagnoses.peritoneal_fluid_cytological_status', 'diagnoses.pregnant_at_diagnosis', 'diagnoses.primary_diagnosis', 'diagnoses.primary_disease', 'diagnoses.primary_gleason_grade', 'diagnoses.prior_malignancy', 'diagnoses.prior_treatment', 'diagnoses.progression_or_recurrence', 'diagnoses.residual_disease', 'diagnoses.satellite_nodule_present', 'diagnoses.secondary_gleason_grade', 'diagnoses.site_of_resection_or_biopsy', 'diagnoses.sites_of_involvement', 'diagnoses.sites_of_involvement_count', 'diagnoses.submitter_id', 'diagnoses.supratentorial_localization', 'diagnoses.synchronous_malignancy', 'diagnoses.tissue_or_organ_of_origin', 'diagnoses.tumor_burden', 'diagnoses.tumor_confined_to_organ_of_origin', 'diagnoses.tumor_depth', 'diagnoses.tumor_focality', 'diagnoses.tumor_grade', 'diagnoses.tumor_grade_category', 'diagnoses.tumor_of_origin', 'diagnoses.tumor_regression_grade', 'diagnoses.uicc_clinical_m', 'diagnoses.uicc_clinical_n', 'diagnoses.uicc_clinical_stage', 'diagnoses.uicc_clinical_t', 'diagnoses.uicc_pathologic_m', 'diagnoses.uicc_pathologic_n', 'diagnoses.uicc_pathologic_stage', 'diagnoses.uicc_pathologic_t', 'diagnoses.uicc_staging_system_edition', 'diagnoses.ulceration_indicator', 'diagnoses.weiss_assessment_findings', 'diagnoses.weiss_assessment_score', 'diagnoses.who_cns_grade', 'diagnoses.who_nte_grade', 'diagnoses.wilms_tumor_histologic_subtype', 'diagnoses.year_of_diagnosis', 'treatments.chemo_concurrent_to_radiation', 'treatments.clinical_trial_indicator', 'treatments.course_number', 'treatments.days_to_treatment_end', 'treatments.days_to_treatment_start', 'treatments.drug_category', 'treatments.embolic_agent', 'treatments.initial_disease_status', 'treatments.lesions_treated_number', 'treatments.margin_distance', 'treatments.margin_status', 'treatments.margins_involved_site', 'treatments.number_of_cycles', 'treatments.number_of_fractions', 'treatments.prescribed_dose', 'treatments.prescribed_dose_units', 'treatments.pretreatment', 'treatments.protocol_identifier', 'treatments.radiosensitizing_agent', 'treatments.reason_treatment_ended', 'treatments.reason_treatment_not_given', 'treatments.regimen_or_line_of_therapy', 'treatments.residual_disease', 'treatments.route_of_administration', 'treatments.submitter_id', 'treatments.therapeutic_agents', 'treatments.therapeutic_level_achieved', 'treatments.therapeutic_levels_achieved', 'treatments.therapeutic_target_level', 'treatments.timepoint_category', 'treatments.treatment_anatomic_site', 'treatments.treatment_anatomic_sites', 'treatments.treatment_arm', 'treatments.treatment_dose', 'treatments.treatment_dose_max', 'treatments.treatment_dose_units', 'treatments.treatment_duration', 'treatments.treatment_effect', 'treatments.treatment_effect_indicator', 'treatments.treatment_frequency', 'treatments.treatment_id', 'treatments.treatment_intent_type', 'treatments.treatment_or_therapy', 'treatments.treatment_outcome', 'treatments.treatment_outcome_duration', 'treatments.treatment_type']</code></pre>
+</div>
+</div>
+<div id="a9ef6d95" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of unique patients</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>unique_patients <span class="op">=</span> cesc[<span class="st">'cases.submitter_id'</span>].nunique()</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'The data has </span><span class="sc">{</span>unique_patients<span class="sc">}</span><span class="ss"> unique patients.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The data has 307 unique patients.</code></pre>
+</div>
+</div>
+</section>
+<section id="exposure-data" class="level3">
+<h3 class="anchored" data-anchor-id="exposure-data">Exposure Data</h3>
+<div id="513ffeba" class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Open cesc exposure tsv data</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>cesc_exposure_df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/raw-data/cesc/exposure.tsv'</span>, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>cesc_exposure_df.head(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">project.project_id</th>
+<th data-quarto-table-cell-role="th">cases.case_id</th>
+<th data-quarto-table-cell-role="th">cases.submitter_id</th>
+<th data-quarto-table-cell-role="th">exposures.age_at_last_exposure</th>
+<th data-quarto-table-cell-role="th">exposures.age_at_onset</th>
+<th data-quarto-table-cell-role="th">exposures.alcohol_days_per_week</th>
+<th data-quarto-table-cell-role="th">exposures.alcohol_drinks_per_day</th>
+<th data-quarto-table-cell-role="th">exposures.alcohol_frequency</th>
+<th data-quarto-table-cell-role="th">exposures.alcohol_history</th>
+<th data-quarto-table-cell-role="th">exposures.alcohol_intensity</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">exposures.smoking_frequency</th>
+<th data-quarto-table-cell-role="th">exposures.submitter_id</th>
+<th data-quarto-table-cell-role="th">exposures.time_between_waking_and_first_smoke</th>
+<th data-quarto-table-cell-role="th">exposures.tobacco_smoking_onset_year</th>
+<th data-quarto-table-cell-role="th">exposures.tobacco_smoking_quit_year</th>
+<th data-quarto-table-cell-role="th">exposures.tobacco_smoking_status</th>
+<th data-quarto-table-cell-role="th">exposures.type_of_smoke_exposure</th>
+<th data-quarto-table-cell-role="th">exposures.type_of_tobacco_used</th>
+<th data-quarto-table-cell-role="th">exposures.use_per_day</th>
+<th data-quarto-table-cell-role="th">exposures.years_smoked</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>TCGA-CESC</td>
+<td>00ad0ffe-2105-4829-a495-1c2aceb5bb31</td>
+<td>TCGA-EK-A2R9</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>...</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>Not Reported</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>TCGA-CESC</td>
+<td>00bca18c-b3d4-45a3-8f19-034cc40449a4</td>
+<td>TCGA-C5-A2LV</td>
+<td>'--</td>
+<td>20</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>...</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>Current Smoker</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>TCGA-CESC</td>
+<td>010a807f-9dc0-4e14-9533-dcf478f3d947</td>
+<td>TCGA-C5-A902</td>
+<td>'--</td>
+<td>14</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>...</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>Current Smoker</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>TCGA-CESC</td>
+<td>03804f9b-df7c-462c-8984-8eb3a5ed4999</td>
+<td>TCGA-VS-A9V2</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>...</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>Lifelong Non-Smoker</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>TCGA-CESC</td>
+<td>03c3fe57-ae85-4e45-9657-c3182ab5e124</td>
+<td>TCGA-C5-A1BL</td>
+<td>'--</td>
+<td>16</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>...</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>1988</td>
+<td>Current Reformed Smoker for &lt; or = 15 yrs</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+<td>'--</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 40 columns</p>
+</div>
+</div>
+</div>
+<p>The code above can also be found on our repository <a href="https://github.com/dsan-5000/fall-2025-project-Munashe22/tree/main/technical-details/data-collection">here</a></p>
+
+
+
+</section>
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-nci_gdc_docs" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">National Cancer Institute. Genomic data commons documentation. (2024).</div>
+</div>
+<div id="ref-tcga_program" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">National Cancer Institute &amp; National Human Genome Research Institute. The cancer genome atlas program. (2024).</div>
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
