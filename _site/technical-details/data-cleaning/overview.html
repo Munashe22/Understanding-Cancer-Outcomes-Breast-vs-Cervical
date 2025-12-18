@@ -372,7 +372,7 @@ div.csl-indent {
 </div>
 <p><code>Missing data</code>: From viewing both datasets, the missing data was represented as ’— and required replacing the placeholder string with numpy nontype in order to handle missing values efficiently.</p>
 <p>The missing values per columns ranged from 0% to 100%, this was a limitation of the datasets especially due to a lot of demographic columns having a large percentage of missing values, as these columns might have been potential social determinants of survival days depending on the type of cancer,</p>
-<div id="a2b082b1" class="cell" data-tbl-cap="Distribution of missing values in key demographic columns" data-execution_count="2">
+<div id="a05c9583" class="cell" data-tbl-cap="Distribution of missing values in key demographic columns" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>demographic.year_of_birth: 0.00% missing values
 demographic.age_at_index: 0.00% missing values
@@ -386,7 +386,7 @@ demographic.days_to_death: 0.00% missing values</code></pre>
 </div>
 <p>However, the <code>demographic.vital_status</code> column has fewer missing values, which still allowed for some analysis regarding survival status. Despite a large number of missing values in <code>demographic.days_to_death</code>, we reasonable assummed it is because the patient is alive since the missing values corresponded to <strong>alive</strong> in the <code>vital_status</code> column. In addition, <code>days_to_last_follow_up</code> also has fewer missing values (11% in the brca dataset, and 12% in the cesc dataset), which enabled inferring survival time in feature engineering.</p>
 <p>The datasets had a lot of columns with missing data. The overall original view of missing data in the brca dataset is showed below:</p>
-<div id="e14e3048" class="cell" data-tbl-cap="Distribution of missing values in breast cancer dataset" data-execution_count="3">
+<div id="e41da849" class="cell" data-tbl-cap="Distribution of missing values in breast cancer dataset" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <pre><code>&lt;Figure size 1440x768 with 0 Axes&gt;</code></pre>
 </div>

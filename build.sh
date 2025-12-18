@@ -47,7 +47,7 @@ echo "Do you want to push the website to your Georgetown University (GU) domains
 read -r answer
 
 if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
-    rsync -avz --delete ./ munasheg@gtown03.reclaimhosting.com:/home/munasheg/DSAN-5000-Project
+    rsync -avz --delete ./ munasheg@gtown03.reclaimhosting.com:/home/munasheg/public_html/DSAN-5000-Project
     echo "Website pushed to GU domains."
 else
     echo "Deployment to GU domains folder skipped."
