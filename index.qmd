@@ -1,5 +1,5 @@
 ---
-title: "Landing page"
+title: "Understanding Cancer Outcomes: Breast vs. Cervical"
 ---
 
 ## About the Project
