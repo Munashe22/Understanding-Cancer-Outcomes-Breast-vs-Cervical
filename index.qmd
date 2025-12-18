@@ -1,5 +1,8 @@
 ---
 title: "Understanding Cancer Outcomes: Breast vs. Cervical"
+format:
+  html:
+    embed-resources: true
 ---
 
 ## About the Project

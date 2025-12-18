@@ -1,4 +1,9 @@
-# Understanding Breast and Cervical Cancer: Patient Outcomes and Survival Patterns
+---
+title: "Understanding Cancer Outcomes: Breast vs. Cervical"
+format:
+  html:
+    embed-resources: true
+---
 
 ## Executive Summary
 
