@@ -1,10 +1,3 @@
----
-title: "Understanding Cancer Outcomes: Breast vs. Cervical"
-format:
-  html:
-    embed-resources: true
----
-
 ## About the Project
 
 The project investigates survival patterns in breast and cervical cancer using data from The Cancer Genome Atlas (TCGA). Patients with the same diagnosis often experience different outcomes based on factors such as age, cancer stage, treatment received, and other clinical variables. Understanding these patterns can support improvements in patient care and the personalization of treatment strategies.
